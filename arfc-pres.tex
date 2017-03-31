@@ -7,15 +7,22 @@
 \documentclass[9pt]{beamer}
 \usetheme[white]{Illinois}
 %\title[short title]{long title}
-\title[Short Title]{A Very Very Long Title for a Presentation about Cats}
+\title[Short Title]{Benefits of Siting a Borehole Repository on Non-Operating Nuclear Facility}
 %\subtitle[short subtitle]{long subtitle}
-\subtitle[Short SubTitle]{Mostly Kittens}
+\subtitle[Short SubTitle]{Quantitative Siting Criteria}
 %\author[short name]{long name}
-\author[Your Name]{Your Name\\Advanced Reactors and Fuel Cycles Group}
+\author[Your Name]{Jin Whan Bae, Kathyrn Huff, William Roy \\ Advanced Reactors and Fuel Cycles Group}
 %\date[short date]{long date}
 \date[04.01.2100]{April 1, 2100}
 %\institution[short name]{long name}
 \institute[UIUC]{University of Illinois at Urbana-Champaign}
+
+%%%% Acronym support
+
+\usepackage[acronym,toc]{glossaries}
+\include{acros}
+
+\makeglossaries
 
 %\usepackage{bbding}
 \usepackage{amsfonts}
@@ -27,7 +34,6 @@
 \usepackage{microtype} % if using PDF
 \usepackage{bigints}
 \usepackage{minted}
-
 \newcommand{\units}[1] {\:\text{#1}}%
 \newcommand{\SN}{S$_N$}%{S$_\text{N}$}%{$S_N$}%
 \DeclareMathOperator{\erf}{erf}
@@ -78,19 +84,14 @@
 \end{frame}
 }
 
-\section{Motivation}
-\subsection{Cat Behavior}
-\input{cat_behavior}
-\subsection{Cat Appearance}
-\input{cat_appearance}
-\subsection{Cat Math}
-\input{cat_math}
-\section{Methods}
-\subsection{Illinois Colors}
-\input{fierce}
-\section{Conclusion}
-\input{conclusion}
-\input{acks}
+\section{Background}
+\input{background}
+\section{Case Specification}
+\input{case_specification}
+\section{Metric Evaluations}
+\input{metric_evaluations}
+\section{Results}
+\input{results}
 %%--------------------------------%%
 %%--------------------------------%%
 \begin{frame}[allowframebreaks]
