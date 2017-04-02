@@ -23,7 +23,8 @@
 		\begin{center}
 			\includegraphics[height=4cm]{./images/cbrock.png}
 		\end{center}
-		\caption{Map of Areas in US with crystalline basement rock at less than 2,000m in depth
+		\caption{Map of Areas in US with crystalline basement rock at less than 2,000m in depth.
+			Pink areas are suitable for a borehole repository.
 			 \cite{freeze_siting_2015}.}
 		\label{fig:basement_map}
 	\end{figure}
@@ -47,21 +48,6 @@
 		\item Socio-Economic research done in impacts of its shutdown
 		\item Central Location (low MTHM*km value)
 	\end{itemize}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Evaluation Method}
-	For Each Metric:
-	\begin{align} 
-	\mbox{NV} &= \frac{x-\mbox{W}}{\mbox{B}-\mbox{W}}\\
-	NV &= \mbox{normalized value for the metric}\\
-	x &= \mbox{considered case value for the metric}\\
-	B &= \mbox{best case value for the metric}\\
-	W &= \mbox{worst case value for the metric}\\
-	\end{align}
-	Some are Boolean.
-		
-	Weight of metric for each Stakeholder is up to the discretion of evaluator's interpretation.
 \end{frame}
 
 \begin{frame}
@@ -97,3 +83,38 @@
 	\end{itemize}
 \end{frame}
 
+
+\begin{frame}
+	\frametitle{Evaluation Method}
+	For Each Metric:
+	\begin{align} 
+		\mbox{NV} &= \frac{x-\mbox{W}}{\mbox{B}-\mbox{W}}\\
+		NV &= \mbox{normalized value for the metric}\\
+		x &= \mbox{considered case value for the metric}\\
+		B &= \mbox{best case value for the metric}\\
+		W &= \mbox{worst case value for the metric}\\
+	\end{align}
+	Some are Boolean - either yes or no.
+\end{frame}
+
+\begin{frame}
+	\frametitle{Stakeholder Weights}
+	Weight of metric for each Stakeholder is up to the discretion of evaluator's interpretation.
+	For this paper, the following weight is used:
+	\begin{table}[h]
+		\centering
+		\caption {Metrics and Weight for Each Stakeholder}
+		\label{tab:stakeholders_weight}
+		\scalebox{0.8}{
+			\begin{tabular}{|l|c|c|c|c|}
+				\hline
+				Metric & Federal & State & Local & Utility  \\ \hline
+				Transportation Burden & 3 & 2 & 1 & 1    \\ \hline
+				Site Appropriateness & 3 & 2 & 1 & 1 \\ \hline
+				Workforce Utilization & 3 & 2 & 2 & 2 \\ \hline
+				Consenting Locals & 3 & 2 & 3 & 2 \\ \hline
+				Site Access & 3 & 2 & 1 & 1 \\ \hline
+				Expediency & 3 & 2 & 1 & 3 \\ \hline \hline
+			\end{tabular}}
+		\end{table}
+	\end{frame}
