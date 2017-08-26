@@ -1,112 +1,300 @@
+\subsection{Assumptions}
+
 \begin{frame}
-	\frametitle{Integrated Design}
-	Non-operating Reactor Site + Borehole Repository
+	\frametitle{Assumptions}
 	\begin{itemize}
-		\item Save cost on decommissioning (some parts)
-		\item Earn Revenue from hosting repository
-		\item Save cost on repository facility construction
-			  with already existing infrastructure
-		\item Communities that benefit from power plants are more likely
-			  to be friendly
+		\item fuel cycle facility parameters (throughput, availability)
+		\item compositions of fresh and spent fuel
+		\item material flow
 	\end{itemize}
 \end{frame}
 
 \begin{frame}
-	\frametitle{Why Boreholes?}
+	\frametitle{Assumptions}
 	\begin{itemize}
-		\item Less rigorous geolgoical standard (flexible siting)
-		\item modularity
-		\item Area(30$km^2$ for 70,000MTHM)
-		\item Less Cost
+		\item SFR technology available for deployment in 2040.
+		\item Decay is not taken into account.
+		\item Reactor construction is always completed on time.
+		\item Separated Uranium is unused and stockpiled.
+		\item LWRs have a lifetime of 60 years, unless shut down prematurely.
+		\item SFRs have a lifetime of 80 years.
 	\end{itemize}
-	\begin{figure}[htbp!]
-		\begin{center}
-			\includegraphics[height=4cm]{./images/cbrock.png}
-		\end{center}
-		\caption{Map of Areas in US with crystalline basement rock at less than 2,000m in depth.
-			Pink areas are suitable for a borehole repository.
-			 \cite{freeze_siting_2015}.}
-		\label{fig:basement_map}
-	\end{figure}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Method of Comparison: Case Study}
-	Two cases:
+	For the French Transition Scenario:
 	\begin{itemize}
-		\item Reference/Base Case: Yucca Mountain
-		\item Proposed Case: Borehole Repository at Clinton Power Station (Clinton, IL)
+		\item Reprocessing and fabrication begins 2020
+		\item French nuclear capacity remains constant at 66,000 MWe
+		\item Reprocessing and fabrication capacity is unlimited.
 	\end{itemize}
 \end{frame}
 
 \begin{frame}
-	\frametitle{Why Clinton?}
-	\begin{itemize}
-		\item Clinton is under risk of shutting down, despite the recent bill that saved
-		it from shutting down. (Inherent economic disadvantage of single - unit reactor site)
-		\item Geological study done for Decatur Carbon Sequestration Project
-		\item Socio-Economic research done in impacts of its shutdown
-		\item Central Location (low MTHM*km value)
-	\end{itemize}
-\end{frame}
-
-\begin{frame}
-	\frametitle{6 Quantitative Metrics}
-	\begin{itemize}
-			\item Transportation Burden $[MTHM \cdot km]$: Less SNF to be transported
-			\item Workforce Utilization $[-]$: Pre existing skilled workforce
-			\item Expediency $[y]$: Faster the removal of SNF, more cost savings
-			\item Consent Basis $[\frac{nuclear MW}{\mbox{capita}}]$: More familiarity
-			and dependency to nuclear = more likely to be consenting
-			\item Site Access $[-]$: Rail access to the site is essential for 
-			beginning operations.
-			\item Site Appropriateness $[-]$: Must be geologically viable.
-	\end{itemize}
-
-\end{frame}
-
-\begin{frame}
-	\frametitle{Stakeholders}
-	\begin{itemize}
-		\item the federal government,
-		\item the state government,
-		\item the local government / community,
-		\item and the owner of the non-operating plant.
-	\end{itemize}
-\end{frame}
-
-
-\begin{frame}
-	\frametitle{Evaluation Method}
-	For Each Metric:
-	\begin{align} 
-		\mbox{NV} &= \frac{x-\mbox{W}}{\mbox{B}-\mbox{W}}\\
-		NV &= \mbox{normalized value for the metric}\\
-		x &= \mbox{considered case value for the metric}\\
-		B &= \mbox{best case value for the metric}\\
-		W &= \mbox{worst case value for the metric}\\
-	\end{align}
-	Some are Boolean - either yes or no.
-\end{frame}
-
-\begin{frame}
-	\frametitle{Stakeholder Weights}
-	Weight of metric for each Stakeholder is up to the discretion of evaluator's interpretation.
-	For this paper, the following weight is used:
+	\frametitle{Composition of fresh and spent fuel}
+	Reference depletion calculation from ORGIEN was used (also used in \cite{wilson_adoption_2009}).
 	\begin{table}[h]
-		\centering
-		\caption {Metrics and Weight for Each Stakeholder}
-		\label{tab:stakeholders_weight}
-		\scalebox{0.8}{
-			\begin{tabular}{|l|c|c|c|c|}
-				\hline
-				Metric & Federal & State & Local & Utility  \\ \hline
-				Transportation Burden & 3 & 2 & 1 & 1    \\ \hline
-				Site Appropriateness & 3 & 2 & 1 & 1 \\ \hline
-				Workforce Utilization & 3 & 2 & 2 & 2 \\ \hline
-				Consenting Locals & 3 & 2 & 3 & 2 \\ \hline
-				Site Access & 3 & 2 & 1 & 1 \\ \hline
-				Expediency & 3 & 2 & 1 & 3 \\ \hline \hline
-			\end{tabular}}
-		\end{table}
-	\end{frame}
+	\centering
+	\scalebox{0.26}{
+		\begin{tabular}{|c|c|c|c|c|c|c|}
+		\hline
+		 Isotope 	 & 	Fresh UOX Fuel & 	Spent UOX Fuel (BU: $51\frac{GWdth}{MTHM}$) & Fresh SFR Fuel & Spent SFR Fuel \\ \hline 
+		 He4	 & 	 	& 	9.474E-07 & 	 	 & 	7.827E-06 \\ \hline 
+		 Ra226	 & 	 	& 	9.788E-14 & 	 	 & 	5.151E-14 \\ \hline 
+		 Ra228	 & 	 	& 	2.750E-20 & 	 	 & 	4.904E-21 \\ \hline 
+		 Pb206	 & 	 	& 	5.574E-18 & 	 	 & 	1.210E-18 \\ \hline 
+		 Pb207	 & 	 	& 	1.685E-15 & 	 	 & 	1.892E-16 \\ \hline 
+		 Pb208	 & 	 	& 	3.688E-12 & 	 	 & 	5.875E-11 \\ \hline 
+		 Pb210	 & 	 	& 	3.023E-19 & 	 	 & 	8.143E-18 \\ \hline 
+		 Th228	 & 	 	& 	8.475E-12 & 	 	 & 	1.004E-10 \\ \hline 
+		 Th229	 & 	 	& 	2.727E-12 & 	 	 & 	4.065E-12 \\ \hline 
+		 Th230	 & 	 	& 	2.625E-09 & 	 	 & 	2.139E-09 \\ \hline 
+		 Th232	 & 	 	& 	4.174E-10 & 	 	 & 	4.425E-11 \\ \hline 
+		 Bi209	 & 	 	& 	6.607E-16 & 	 	 & 	2.600E-14 \\ \hline 
+		 Ac227	 & 	 	& 	3.096E-14 & 	 	 & 	4.840E-15 \\ \hline 
+		 Pa231	 & 	 	& 	9.246E-10 & 	 	 & 	1.300E-10 \\ \hline 
+		 U232	 & 	 	& 	0.000 & 	 	 & 	0.000 \\ \hline 
+		 U233	 & 	 	& 	2.213E-09 & 	 	 & 	5.528E-09 \\ \hline 
+		 U234	 & 	0.000& 	0.000 & 	 	 & 	0.000 \\ \hline 
+		 U235	 & 	0.032& 	0.007 & 	0.002 & 	0.000 \\ \hline 
+		 U236	 & 	 	& 	0.005 & 	 	 & 	0.000 \\ \hline 
+		 U238	 & 	0.968& 	0.920 & 	0.887 & 	0.808 \\ \hline 
+		 Np237	 & 	 	& 	0.000 & 	 	 & 	0.000 \\ \hline 
+		 Pu238	 & 	 	& 	0.000 & 	0.001 & 	0.001 \\ \hline 
+		 Pu239	 & 	 	& 	0.006 & 	0.060 & 	0.085 \\ \hline 
+		 Pu240	 & 	 	& 	0.002 & 	0.027 & 	0.027 \\ \hline 
+		 Pu241	 & 	 	& 	0.001 & 	0.014 & 	0.003 \\ \hline 
+		 Pu242	 & 	 	& 	0.000 & 	0.005 & 	0.001 \\ \hline 
+		 Pu244	 & 	 	& 	2.864E-08 & 1.508E-07 & 	5.461E-09 \\ \hline 
+		 Am241	 & 	 	& 	6.442E-05 & 	 	 & 	0.001 \\ \hline 
+		 Am242m	 & 	 	& 	8.533E-07 & 	 	 & 	7.961E-05 \\ \hline 
+		 Am243	 & 	 	& 	0.000 & 	 	 & 	0.000 \\ \hline 
+		 Cm242	 & 	 	& 	2.589E-05 & 	 	 & 	5.331E-05 \\ \hline 
+		 Cm243	 & 	 	& 	0.000 & 	 	 & 	3.242E-06 \\ \hline 
+		 Cm244	 & 	 	& 	8.561E-05 & 	 	 & 	0.000 \\ \hline 
+		 Cm245	 & 	 	& 	5.721E-06 & 	 	 & 	3.936E-05 \\ \hline 
+		 Cm246	 & 	 	& 	7.295E-07 & 	 	 & 	1.434E-05 \\ \hline 
+		 Cm247	 & 	 	& 	0.000 & 	 	 & 	5.317E-07 \\ \hline 
+		 Cm248	 & 	 	& 	7.691E-10 & 	 	 & 	0.000 \\ \hline 
+		 Cm250	 & 	 	& 	4.280E-18 & 	 	 & 	6.407E-15 \\ \hline 
+		 Cf249	 & 	 	& 	1.649E-12 & 	 	 & 	6.446E-10 \\ \hline 
+		 Cf250	 & 	 	& 	2.041E-12 & 	 	 & 	6.703E-11 \\ \hline 
+		 Cf251	 & 	 	& 	9.865E-13 & 	 	 & 	1.903E-12 \\ \hline 
+		 Cf 252	 & 	 	& 	6.579E-13 & 	 	 & 	4.014E-14 \\ \hline 
+		 H3	 & 	 	& 	8.584E-08 & 	 	 & 	1.747E-07 \\ \hline 
+		 C14	 & 	 	& 	4.057E-11 & 	 	 & 	 	 \\ \hline 
+		 C Other	 & 	 	& 	 	 & 	 	 & 	 	 \\ \hline 
+		 Kr81	 & 	 	& 	4.216E-11 & 	 	 & 	8.038E-12 \\ \hline 
+		 Kr85	 & 	 	& 	3.444E-05 & 	 	 & 	2.950E-05 \\ \hline 
+		 Kr Other	 & 	 	& 	0.000 & 	 	 & 	0.000 \\ \hline 
+		 Sr90	 & 	 	& 	0.001 & 	 	 & 	0.001 \\ \hline 
+		 Sr Other	 & 	 	& 	0.000 & 	 	 & 	0.000 \\ \hline 
+		 Tc99	 & 	 	& 	0.000 & 	 	 & 	5.391E-05 \\ \hline 
+		 Tc Other	 & 	 	& 	0.000 & 	 	 & 	0.002 \\ \hline 
+
+		\end{tabular}}
+		\caption{Fresh and Spent Fuel Compositions}
+		\label{tab:comp}
+\end {table}
+\end{frame}
+
+%tikz styling definitions
+
+\tikzstyle{decision} = [diamond, draw, fill=blue!20, 
+text width=4.5em, text badly centered, node distance=3cm, inner sep=0pt]
+\tikzstyle{block} = [rectangle, draw, fill=blue!20, 
+text width=5em, text centered, rounded corners, minimum height=4em]
+\tikzstyle{line} = [draw, -latex']
+\tikzstyle{cloud} = [draw, ellipse,fill=red!20, node distance=3cm,
+minimum height=2em]
+
+\subsection{Simulation Specifications}
+
+\begin{frame}
+	\frametitle{Material Flow}
+	
+\begin{figure}
+        \begin{adjustbox}{max totalsize={1.1\textwidth}{.8\textheight}, center}
+                \begin{tikzpicture}[align=center, node distance = 3cm and 3cm, auto]
+                % Place nodes
+                \node [block] (sr) {Mine (\texttt{SOURCE})};
+                \node [cloud, below of=sr] (nu) {Nat U};
+                \node [block, below of=nu] (enr) {Enrichment ({\small \texttt{ENRICHMENT}})};
+                \node [cloud, below of=enr] (uox) {\gls{UOX}};
+                \node [block, below of=uox] (lwr) {\gls{LWR} (\texttt{REACTOR})};
+                \node [cloud, right of=lwr] (snf) {\gls{UNF}};
+                \node [cloud, right of=uox] (cunf) {Cooled \gls{UNF}};
+                \node [block, right of=snf] (pool) {Pool (\texttt{Storage})};
+                \node [cloud, left of=lwr] (tl2) {Dep U};
+                \node [cloud, right of=enr] (tl) {Dep U};
+                \node [block, right of=tl] (sk) {Repository (\texttt{SINK})};
+                \node [cloud, below of=pool] (cunf2) {Cooled \gls{UNF}};
+                \node [block, below of=snf] (rep) {Reprocessing ({\small \texttt{SEPARATIONS}})};
+                \node [cloud, below of=rep] (u) {Sep. U} ;
+                \node [cloud, left of=rep] (pu) {Sep. Pu};
+                \node [block, left of=pu] (mix) {Fabrication (\texttt{MIXER})};
+                \node [cloud, below of=mix] (mox) {\gls{MOX}};
+                \node [block, below of=mox] (mxr) {\gls{MOX} Reactors};
+                \node [cloud, right of= mxr] (snmox) {Spent \gls{MOX}};
+                
+                
+                \draw[->, thick] (sr) -- (nu);
+                \draw[->, thick] (nu) -- (enr);
+                \draw[->, thick] (enr) -- (tl);
+                \draw[->, thick] (enr) -- (tl2);
+                \draw[->, thick] (tl) -- (sk);
+                \draw[->, thick] (tl2) -- (mix);
+                \draw[->, thick] (enr) -- (uox);
+                \draw[->, thick] (uox) -- (lwr);
+                \draw[->, thick] (lwr) -- (snf);
+                
+                \draw[->, thick] (lwr) -- (snf);
+                \draw[->, thick] (snf) -- (pool);
+                \draw[->, thick] (pool) -- (cunf);
+                \draw[->, thick] (pool) -- (cunf2);
+                \draw[->, thick] (cunf) -- (sk);
+                \draw[->, thick] (cunf2) -- (rep);
+                
+                \draw[->, thick] (rep) -- (u);
+                \draw[->, thick] (rep) -- (pu);
+                \draw[->, thick] (pu) -- (mix);
+                \draw[->, thick] (mix) -- (mox);
+                \draw[->, thick] (mox) -- (mxr);
+                \draw[->, thick] (mxr) -- (snmox);
+                \draw[->, thick] (snmox) -- (rep);
+                
+                \end{tikzpicture}
+                \end{adjustbox}
+                
+                \caption{Model Fuel Cycle with \gls{MOX} Reprocessing}
+                \label{diag:fc}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{First Simulation - EU Nuclear Opearations \textasciitilde 2050}
+	Deployment and Reactor data from IAEA PRIS
+	Reprocessing plant and fabrication plant modeled after French La Hague and MELOX site
+	\cite{schneider_spent_2008, hugelmann_melox_1999}.
+		
+\begin{table}[h]
+	\centering
+	\begin{tabularx}{\textwidth}{bb}
+		\hline
+		Specification & Value \\
+		\hline
+		Simulation Time & 1970-2050 \\ 
+		Reprocessing Capacity & 91.6 MTHM of \gls{UNF} per month \cite{schneider_spent_2008} \\
+		Reprocessing Efficiency & 99.8\% \\
+		Reprocessing Streams & Plutonium and Uranium \\
+		\gls{MOX} Fabrication & \small{9\% Reprocessed Pu + 91\% Depleted U} \\
+		\gls{MOX} Fabrication Throughput & 16.25 MTHM of \gls{MOX} per month  \cite{hugelmann_melox_1999} \\
+		\gls{MOX} Fuel Reprocessing Stage &  Used \gls{MOX} gets reprocessed infinitely. \\  
+		Reprocessed Uranium Usage &  None. Stockpile reprocessed U \\
+		\hline
+	\end{tabularx}
+	\caption {Specification for Historical Operation of \gls{EU} Case}
+	\label{tab:sim_eu}
+\end{table}
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Second Simulation - French Transition to SFRs \textasciitilde 2160}
+	
+\begin{table}[h]
+	\centering
+	\begin{tabularx}{\textwidth}{bb}
+		\hline
+		Specification & Value \\
+		\hline
+		Simulation Time & 1970-2160 \\
+		\gls{SFR} Available Year & 2040 \\
+		Reprocessing Capacity & $\infty$ \\
+		Reprocessing and Fabrication Begins & 2020 \\
+		Separation Efficiency & 99.8 \% \\
+		Reprocessing Streams & plutonium and uranium \\
+		\small{Used \gls{UOX} and Depleted U Inventory} & 141,659 MTHM {\small (From first simulation)} \\
+		\small{Additional Used \gls{UOX} or Depleted U} & None  \\
+		\gls{MOX} Fabrication &  \small{11\% Reprocessed Pu + 89\% Depleted U}  \\
+		\gls{MOX} Fabrication Throughput & infinite \\
+		\gls{MOX} Fuel Reprocessing Stage &  Used \gls{MOX} gets reprocessed infinitely. \\
+		Reprocessed Uranium Usage &  None. Stockpile reprocessed U. \\
+		\hline
+	\end{tabularx}
+	\caption {Specification for French Transition to \gls{SFR} case }
+	\label{tab:sim_france}
+\end{table}
+
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Reactor Specifications - PWR}
+	
+	\begin{table}[h]
+	\centering
+	\begin{tabularx}{\textwidth}{bb}
+		\hline
+		Specification & Value \\
+		\hline
+		PWR Cycle Time & 18 months \\ 
+		PWR Refueling Outage & 2 months \\
+		Fuel Mass per Assembly & 523.4 kg \\
+		Burnup & 51 GWd/tons \\
+		Num. of Aseem. per Core & 193 for 1,000 MWe, linearly adjusted\\
+		Num. of Assem. per Batch & 1/3 of the core \\
+		Fuel & \small{French \glspl{PWR} prefer \gls{MOX} but also accept \gls{UOX}}\\
+		\hline
+	\end{tabularx}
+	\caption {\gls{PWR} Specifications}
+	\label{tab:pwr}
+	\end{table}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Reactor Specifications - BWR}
+	\begin{table}[h]
+	\centering
+	\begin{tabularx}{\textwidth}{bb}
+		\hline
+		Specification & Value \\
+		\hline
+		BWR Cycle Time & 18 months \\ 
+		PWR Refueling Outage & 2 months \\
+		Fuel Mass per Assembly & 180 kg \\
+		Burnup & 51 GWd/tons \\
+		Num. of Aseem. per Core & 764 for 1,000 MWe, linearly adjusted\\
+		Num. of Assem. per Batch & 1/3 of the core \\
+		\hline
+	\end{tabularx}
+	\caption {\gls{BWR} Specifications}
+	\label{tab:bwr}
+\end{table}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Reactor Specifications - ASTRID-type SFRs}
+	
+\begin{table}[h]
+	\centering
+	\begin{tabularx}{\textwidth}{bb}
+		\hline
+		Specification & Value \\
+		\hline
+		SFR Cycle Time & 12 months \\ 
+		SFR Refueling Outage & 2 months \\
+		Fuel Mass per Batch & 11,136 kg \\
+		Batch per Core & 4 \\
+		Power Output & 600 MWe \\
+		lifetime & 80 years \\
+		Fuel & {\small \gls{MOX} (89\% Tailings, 11\% Separated Pu)}\\
+		\hline
+	\end{tabularx}
+	\caption {\gls{SFR} ASTRID Specifications \cite{marsaultmarie-sophie_pre-conceptual_2012}}
+	\label{tab:sfr}
+\end{table}
+\end{frame}
+
+	
+	
+	
+	
+		
