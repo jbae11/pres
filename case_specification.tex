@@ -3,9 +3,9 @@
 \begin{frame}
 	\frametitle{Assumptions}
 	\begin{itemize}
-		\item fuel cycle facility parameters (throughput, availability)
-		\item compositions of fresh and spent fuel
-		\item material flow
+		\item Fuel cycle facility parameters (throughput, availability)
+		\item Compositions of fresh and spent fuel
+		\item Material flow
 	\end{itemize}
 \end{frame}
 
@@ -53,11 +53,11 @@ minimum height=2em]
                 \node [cloud, below of=enr] (uox) {\gls{UOX}};
                 \node [block, below of=uox] (lwr) {\gls{LWR} (\texttt{REACTOR})};
                 \node [cloud, right of=lwr] (snf) {\gls{UNF}};
-                \node [cloud, right of=uox] (cunf) {Cooled \gls{UNF}};
                 \node [block, right of=snf] (pool) {Pool (\texttt{Storage})};
                 \node [cloud, left of=lwr] (tl2) {Dep U};
                 \node [cloud, right of=enr] (tl) {Dep U};
                 \node [block, right of=tl] (sk) {Repository (\texttt{SINK})};
+                \node [cloud, below of=sk] (cunf) {Cooled \gls{UNF}};
                 \node [cloud, below of=pool] (cunf2) {Cooled \gls{UNF}};
                 \node [block, below of=snf] (rep) {Reprocessing ({\small \texttt{SEPARATIONS}})};
                 \node [cloud, below of=rep] (u) {Sep. U} ;
