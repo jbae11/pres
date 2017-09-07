@@ -103,7 +103,7 @@ minimum height=2em]
 
 \begin{frame}
 	\frametitle{First Simulation - EU Nuclear Opearations \textasciitilde 2050}
-	Deployment and Reactor data from IAEA PRIS
+	Deployment and Reactor data from \gls{IAEA} \gls{PRIS}.
 	Reprocessing plant and fabrication plant modeled after French La Hague and MELOX site
 	\cite{schneider_spent_2008, hugelmann_melox_1999}.
 		
@@ -119,7 +119,7 @@ minimum height=2em]
 		Reprocessing Efficiency & 99.8 [\%] \\
 		Reprocessing Streams & Plutonium and Uranium  \\
 		\gls{MOX} Fabrication & \small{9\% Reprocessed Pu + 91\% Depleted U} \\
-		\gls{MOX} Fabrication Throughput & 16.25 [MTHM of \gls{MOX} per month]  \cite{hugelmann_melox_1999} \\
+		\gls{MOX} Fabrication Throughput & 16.25 [MTHM \gls{MOX} per month]  \cite{hugelmann_melox_1999} \\
 		\gls{MOX} Fuel Reprocessing Stage &  Used \gls{MOX} gets reprocessed infinitely. \\  
 		Reprocessed Uranium Usage &  None. Stockpile reprocessed U \\
 		\hline
@@ -162,10 +162,10 @@ minimum height=2em]
 
 \begin{frame}
 	\frametitle{Reactor Parameters - \glspl{LWR} }
-	
+	Number of assemblies are linearly adjusted from a model 1,000 MWe reactor.
 	\begin{table}[h]
     \centering
-    \begin{tabularx}{\textwidth}{bbbb}
+    \begin{tabularx}{\textwidth}{bccc}
         \hline
         Parameter & Units & PWR & BWR \\
         \hline
@@ -173,9 +173,9 @@ minimum height=2em]
         refueling outage & months & 2  & 2 \\
         Fuel mass per assembly & kg & 523.4 & 180 \\
         Burnup & GWd/MTHM & 51  & 51   \\
-        Num. of assem. per core & & 193 for 1,000 MWe, linearly adjusted & 764 for 1,000 MWe, linearly adjusted \\
-        Num. of assem. per batch & 62 for 1,000 MWe, linearly adjusted & 127 for 1,000 MWe, linearly adjusted \\
-        Fuel & \small{French \glspl{PWR} prefer \gls{MOX} but also accept \gls{UOX}} & 3\% enriched \gls{UOX}  \\
+        \small{Num. of assem. per core} & (for 1,000 MWe) & 193  & 764 \\
+        \small{Num. of assem. per batch} & (for 1,000 MWe) & 62 & 127 \\
+        Fuel & & \gls{UOX}, \gls{MOX} & \gls{UOX}  \\
         \hline
     \end{tabularx}
     \caption {\gls{LWR} Parameters}
