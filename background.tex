@@ -1,27 +1,28 @@
-\subsection{Background}
+\subsection{Motivation}
 \begin{frame}
 	\frametitle{Background}
 	\begin{itemize}
-		\item France - preparation for a transition from LWRs to SFRs \cite{noauthor_cne2_nodate}
-		\item France - additional LWR construction to supply Plutonium for SFR transition
-		\item Most EU nations do not have a repository for UNF
+		\item France - preparation for a transition from \glspl{LWR} to \glspl{SFR} \cite{noauthor_reports_2015}
+		\item France - additional LWR construction to supply Plutonium for \gls{SFR} transition
+		\item Most EU nations do not have a repository for \gls{UNF}
 	\end{itemize}
 \end{frame}
 
 \begin{frame}
-	\frametitle{Abstract}
-	By taking UNF from other EU nations, France can transition into a fully SFR fleet (66 GWe)
-	without additional construction of LWRs.
+	\frametitle{Summary}
+	By taking \gls{UNF} from other EU nations, France can transition into a fully \gls{SFR} fleet (66 GWe)
+	without additional construction of \glspl{LWR}.
 	\begin{itemize}
-		\item 66 GWe -> 110 ASTRID-type SFRs
-		\item Collaborative approach seeks to benefit both sides
+		\item Transition to 110 ASTRID-type \glspl{SFR} (Capacity 66 GWe)
+		\item Collaborative approach benefits both sides
 	\end{itemize}
 \end{frame}
 
 \begin{frame}
 	\frametitle{Literature Review}
+	Past research is mostly on:
 	\begin{itemize}
-		\item French transition into SFR after additional construction of EPRs 	
+		\item French transition to \glspl{SFR} after additional construction of \glspl{EPR} 	
 		\cite{carre_overview_2009, martin_symbiotic_2017, freynet_multiobjective_2016}
 		\item partitioning and transmutation in a regional (European) context \cite{fazio_study_2013}
 	\end{itemize}
@@ -30,20 +31,45 @@
 \subsection{Method and Specfications}
 
 \begin{frame}
+	\frametitle{Cyclus}
+	\Cyclus \cite{huff_fundamental_2016} is the next generation agent-based nuclear
+	fuel cycle simulator.
+	\begin{minipage}[b]{.45\linewidth}
+	\begin{itemize}
+		\item Flexibility to users and developers through a dynamic resource exchange solver
+		\item user-developed agent framework
+		\item low barrier to entry for new users and developers
+		\item expanding ecosystem
+	\end{itemize}
+	\end{minipage}
+	\hspace{.5cm}
+	\begin{minipage}[b]{.45\linewidth}
+	\begin{figure}
+		\begin{center}
+			\includegraphics[width=\textwidth]{./images/cyclus/png}
+		\end{center}
+		% does this need a caption?
+	\end{figure}
+	\end{minipage}
+
+\end{frame}
+
+
+\begin{frame}
 	\frametitle{Method}
-	\Cyclus, the agent-based simulator \cite{huff_fundamental_2016} is used.
 	Two simulations are run:
 	\begin{itemize}
-		\item EU UNF inventory at 2050 (1970-2050)
-		\item French transition to SFRs (1970-2160)
+		\item \gls{EU} \gls{UNF} inventory at 2050 (1970-2050)
+		\item French transition to \glspl{SFR} (1970-2160)
 	\end{itemize}
-	The UNF and tails inventory from the first simulation is used for the second simulation.
+	The \gls{UNF} and tails inventory from the first simulation are used for the second simulation.
 \end{frame}
 
 \begin{frame}
 	\frametitle{Deployment Timeline for EU historical operation}
-	Historical operation and predictions are made using references such as IAEA PRIS \cite{iaea_pris_nodate},
-	World Nuclear Association \cite{world_nuclear_association_nuclear_2017} and other papers
+	Historical operation and predictions are made using references such as \gls{IAEA} \gls{PRIS} \cite{iaea_pris_2017},
+	World Nuclear Association \cite{world_nuclear_association_nuclear_2017} and papers on the 
+	future of nuclear power
 	\cite{joskow_future_2012, hatch_politics_2015}.
 	\begin{figure}[htbp!]
 		\begin{center}
@@ -57,7 +83,7 @@
 
 \begin{frame}
 	\frametitle{Deployment Timeline for French Transition}
-	600 MWe SFRS are deployed to a capacity of 66,000 MWe by 2076.
+	110 \glspl{SFR} (66 GWe) are deployed by 2076.
 	\begin{figure}[htbp!]
 	\begin{minipage}[b]{.45\linewidth}
         \begin{center}

@@ -13,9 +13,10 @@
 	\frametitle{Assumptions}
 	\begin{itemize}
 		\item SFR technology available for deployment in 2040.
+		\item French nuclear electricity demand remains static at 66 GWe.
 		\item Decay is not taken into account.
 		\item Reactor construction is always completed on time.
-		\item Separated Uranium is unused and stockpiled.
+		\item Separated uranium is unused and stockpiled.
 		\item LWRs have a lifetime of 60 years, unless shut down prematurely.
 		\item SFRs have a lifetime of 80 years.
 	\end{itemize}
@@ -25,74 +26,6 @@
 		\item French nuclear capacity remains constant at 66,000 MWe
 		\item Reprocessing and fabrication capacity is unlimited.
 	\end{itemize}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Composition of fresh and spent fuel}
-	Reference depletion calculation from ORGIEN was used (also used in \cite{wilson_adoption_2009}).
-	\begin{table}[h]
-	\centering
-	\scalebox{0.26}{
-		\begin{tabular}{|c|c|c|c|c|c|c|}
-		\hline
-		 Isotope 	 & 	Fresh UOX Fuel & 	Spent UOX Fuel (BU: $51\frac{GWdth}{MTHM}$) & Fresh SFR Fuel & Spent SFR Fuel \\ \hline 
-		 He4	 & 	 	& 	9.474E-07 & 	 	 & 	7.827E-06 \\ \hline 
-		 Ra226	 & 	 	& 	9.788E-14 & 	 	 & 	5.151E-14 \\ \hline 
-		 Ra228	 & 	 	& 	2.750E-20 & 	 	 & 	4.904E-21 \\ \hline 
-		 Pb206	 & 	 	& 	5.574E-18 & 	 	 & 	1.210E-18 \\ \hline 
-		 Pb207	 & 	 	& 	1.685E-15 & 	 	 & 	1.892E-16 \\ \hline 
-		 Pb208	 & 	 	& 	3.688E-12 & 	 	 & 	5.875E-11 \\ \hline 
-		 Pb210	 & 	 	& 	3.023E-19 & 	 	 & 	8.143E-18 \\ \hline 
-		 Th228	 & 	 	& 	8.475E-12 & 	 	 & 	1.004E-10 \\ \hline 
-		 Th229	 & 	 	& 	2.727E-12 & 	 	 & 	4.065E-12 \\ \hline 
-		 Th230	 & 	 	& 	2.625E-09 & 	 	 & 	2.139E-09 \\ \hline 
-		 Th232	 & 	 	& 	4.174E-10 & 	 	 & 	4.425E-11 \\ \hline 
-		 Bi209	 & 	 	& 	6.607E-16 & 	 	 & 	2.600E-14 \\ \hline 
-		 Ac227	 & 	 	& 	3.096E-14 & 	 	 & 	4.840E-15 \\ \hline 
-		 Pa231	 & 	 	& 	9.246E-10 & 	 	 & 	1.300E-10 \\ \hline 
-		 U232	 & 	 	& 	0.000 & 	 	 & 	0.000 \\ \hline 
-		 U233	 & 	 	& 	2.213E-09 & 	 	 & 	5.528E-09 \\ \hline 
-		 U234	 & 	0.000& 	0.000 & 	 	 & 	0.000 \\ \hline 
-		 U235	 & 	0.032& 	0.007 & 	0.002 & 	0.000 \\ \hline 
-		 U236	 & 	 	& 	0.005 & 	 	 & 	0.000 \\ \hline 
-		 U238	 & 	0.968& 	0.920 & 	0.887 & 	0.808 \\ \hline 
-		 Np237	 & 	 	& 	0.000 & 	 	 & 	0.000 \\ \hline 
-		 Pu238	 & 	 	& 	0.000 & 	0.001 & 	0.001 \\ \hline 
-		 Pu239	 & 	 	& 	0.006 & 	0.060 & 	0.085 \\ \hline 
-		 Pu240	 & 	 	& 	0.002 & 	0.027 & 	0.027 \\ \hline 
-		 Pu241	 & 	 	& 	0.001 & 	0.014 & 	0.003 \\ \hline 
-		 Pu242	 & 	 	& 	0.000 & 	0.005 & 	0.001 \\ \hline 
-		 Pu244	 & 	 	& 	2.864E-08 & 1.508E-07 & 	5.461E-09 \\ \hline 
-		 Am241	 & 	 	& 	6.442E-05 & 	 	 & 	0.001 \\ \hline 
-		 Am242m	 & 	 	& 	8.533E-07 & 	 	 & 	7.961E-05 \\ \hline 
-		 Am243	 & 	 	& 	0.000 & 	 	 & 	0.000 \\ \hline 
-		 Cm242	 & 	 	& 	2.589E-05 & 	 	 & 	5.331E-05 \\ \hline 
-		 Cm243	 & 	 	& 	0.000 & 	 	 & 	3.242E-06 \\ \hline 
-		 Cm244	 & 	 	& 	8.561E-05 & 	 	 & 	0.000 \\ \hline 
-		 Cm245	 & 	 	& 	5.721E-06 & 	 	 & 	3.936E-05 \\ \hline 
-		 Cm246	 & 	 	& 	7.295E-07 & 	 	 & 	1.434E-05 \\ \hline 
-		 Cm247	 & 	 	& 	0.000 & 	 	 & 	5.317E-07 \\ \hline 
-		 Cm248	 & 	 	& 	7.691E-10 & 	 	 & 	0.000 \\ \hline 
-		 Cm250	 & 	 	& 	4.280E-18 & 	 	 & 	6.407E-15 \\ \hline 
-		 Cf249	 & 	 	& 	1.649E-12 & 	 	 & 	6.446E-10 \\ \hline 
-		 Cf250	 & 	 	& 	2.041E-12 & 	 	 & 	6.703E-11 \\ \hline 
-		 Cf251	 & 	 	& 	9.865E-13 & 	 	 & 	1.903E-12 \\ \hline 
-		 Cf 252	 & 	 	& 	6.579E-13 & 	 	 & 	4.014E-14 \\ \hline 
-		 H3	 & 	 	& 	8.584E-08 & 	 	 & 	1.747E-07 \\ \hline 
-		 C14	 & 	 	& 	4.057E-11 & 	 	 & 	 	 \\ \hline 
-		 C Other	 & 	 	& 	 	 & 	 	 & 	 	 \\ \hline 
-		 Kr81	 & 	 	& 	4.216E-11 & 	 	 & 	8.038E-12 \\ \hline 
-		 Kr85	 & 	 	& 	3.444E-05 & 	 	 & 	2.950E-05 \\ \hline 
-		 Kr Other	 & 	 	& 	0.000 & 	 	 & 	0.000 \\ \hline 
-		 Sr90	 & 	 	& 	0.001 & 	 	 & 	0.001 \\ \hline 
-		 Sr Other	 & 	 	& 	0.000 & 	 	 & 	0.000 \\ \hline 
-		 Tc99	 & 	 	& 	0.000 & 	 	 & 	5.391E-05 \\ \hline 
-		 Tc Other	 & 	 	& 	0.000 & 	 	 & 	0.002 \\ \hline 
-
-		\end{tabular}}
-		\caption{Fresh and Spent Fuel Compositions}
-		\label{tab:comp}
-\end {table}
 \end{frame}
 
 %tikz styling definitions
@@ -105,7 +38,7 @@ text width=5em, text centered, rounded corners, minimum height=4em]
 \tikzstyle{cloud} = [draw, ellipse,fill=red!20, node distance=3cm,
 minimum height=2em]
 
-\subsection{Simulation Specifications}
+\subsection{Simulation Parameters}
 
 \begin{frame}
 	\frametitle{Material Flow}
@@ -178,19 +111,20 @@ minimum height=2em]
 	\centering
 	\begin{tabularx}{\textwidth}{bb}
 		\hline
-		Specification & Value \\
+		Parameter & Value \\
 		\hline
-		Simulation Time & 1970-2050 \\ 
-		Reprocessing Capacity & 91.6 MTHM of \gls{UNF} per month \cite{schneider_spent_2008} \\
-		Reprocessing Efficiency & 99.8\% \\
-		Reprocessing Streams & Plutonium and Uranium \\
+		Simulation Start Year & 1970   \\
+		Simulation End Year & 2050  \\ 
+		Reprocessing Capacity & 91.6 [MTHM \gls{UNF} per month] \cite{schneider_spent_2008}  \\
+		Reprocessing Efficiency & 99.8 [\%] \\
+		Reprocessing Streams & Plutonium and Uranium  \\
 		\gls{MOX} Fabrication & \small{9\% Reprocessed Pu + 91\% Depleted U} \\
-		\gls{MOX} Fabrication Throughput & 16.25 MTHM of \gls{MOX} per month  \cite{hugelmann_melox_1999} \\
+		\gls{MOX} Fabrication Throughput & 16.25 [MTHM of \gls{MOX} per month]  \cite{hugelmann_melox_1999} \\
 		\gls{MOX} Fuel Reprocessing Stage &  Used \gls{MOX} gets reprocessed infinitely. \\  
 		Reprocessed Uranium Usage &  None. Stockpile reprocessed U \\
 		\hline
 	\end{tabularx}
-	\caption {Specification for Historical Operation of \gls{EU} Case}
+	\caption {Parameter for Historical Operation of \gls{EU} Case}
 	\label{tab:sim_eu}
 \end{table}
 	
@@ -203,7 +137,7 @@ minimum height=2em]
 	\centering
 	\begin{tabularx}{\textwidth}{bb}
 		\hline
-		Specification & Value \\
+		Parameter & Value \\
 		\hline
 		Simulation Time & 1970-2160 \\
 		\gls{SFR} Available Year & 2040 \\
@@ -214,12 +148,12 @@ minimum height=2em]
 		\small{Used \gls{UOX} and Depleted U Inventory} & 141,659 MTHM {\small (From first simulation)} \\
 		\small{Additional Used \gls{UOX} or Depleted U} & None  \\
 		\gls{MOX} Fabrication &  \small{11\% Reprocessed Pu + 89\% Depleted U}  \\
-		\gls{MOX} Fabrication Throughput & infinite \\
+		\gls{MOX} Fabrication Throughput & $\infty$ \\
 		\gls{MOX} Fuel Reprocessing Stage &  Used \gls{MOX} gets reprocessed infinitely. \\
 		Reprocessed Uranium Usage &  None. Stockpile reprocessed U. \\
 		\hline
 	\end{tabularx}
-	\caption {Specification for French Transition to \gls{SFR} case }
+	\caption {Parameter for French Transition to \gls{SFR} case }
 	\label{tab:sim_france}
 \end{table}
 
@@ -227,57 +161,37 @@ minimum height=2em]
 
 
 \begin{frame}
-	\frametitle{Reactor Specifications - PWR}
+	\frametitle{Reactor Parameters - \glspl{LWR} }
 	
 	\begin{table}[h]
-	\centering
-	\begin{tabularx}{\textwidth}{bb}
-		\hline
-		Specification & Value \\
-		\hline
-		PWR Cycle Time & 18 months \\ 
-		PWR Refueling Outage & 2 months \\
-		Fuel Mass per Assembly & 523.4 kg \\
-		Burnup & 51 GWd/tons \\
-		Num. of Aseem. per Core & 193 for 1,000 MWe, linearly adjusted\\
-		Num. of Assem. per Batch & 1/3 of the core \\
-		Fuel & \small{French \glspl{PWR} prefer \gls{MOX} but also accept \gls{UOX}}\\
-		\hline
-	\end{tabularx}
-	\caption {\gls{PWR} Specifications}
-	\label{tab:pwr}
-	\end{table}
+    \centering
+    \begin{tabularx}{\textwidth}{bbbb}
+        \hline
+        Parameter & Units & PWR & BWR \\
+        \hline
+        cycle time & months & 18 & 18   \\ 
+        refueling outage & months & 2  & 2 \\
+        Fuel mass per assembly & kg & 523.4 & 180 \\
+        Burnup & GWd/MTHM & 51  & 51   \\
+        Num. of assem. per core & & 193 for 1,000 MWe, linearly adjusted & 764 for 1,000 MWe, linearly adjusted \\
+        Num. of assem. per batch & 62 for 1,000 MWe, linearly adjusted & 127 for 1,000 MWe, linearly adjusted \\
+        Fuel & \small{French \glspl{PWR} prefer \gls{MOX} but also accept \gls{UOX}} & 3\% enriched \gls{UOX}  \\
+        \hline
+    \end{tabularx}
+    \caption {\gls{LWR} Parameters}
+    \label{tab:lwr}
+    \end{table}
 \end{frame}
 
-\begin{frame}
-	\frametitle{Reactor Specifications - BWR}
-	\begin{table}[h]
-	\centering
-	\begin{tabularx}{\textwidth}{bb}
-		\hline
-		Specification & Value \\
-		\hline
-		BWR Cycle Time & 18 months \\ 
-		PWR Refueling Outage & 2 months \\
-		Fuel Mass per Assembly & 180 kg \\
-		Burnup & 51 GWd/tons \\
-		Num. of Aseem. per Core & 764 for 1,000 MWe, linearly adjusted\\
-		Num. of Assem. per Batch & 1/3 of the core \\
-		\hline
-	\end{tabularx}
-	\caption {\gls{BWR} Specifications}
-	\label{tab:bwr}
-\end{table}
-\end{frame}
 
 \begin{frame}
-	\frametitle{Reactor Specifications - ASTRID-type SFRs}
+	\frametitle{Reactor Parameters - ASTRID-type SFRs}
 	
 \begin{table}[h]
 	\centering
 	\begin{tabularx}{\textwidth}{bb}
 		\hline
-		Specification & Value \\
+		Parameter & Value \\
 		\hline
 		SFR Cycle Time & 12 months \\ 
 		SFR Refueling Outage & 2 months \\
@@ -288,7 +202,7 @@ minimum height=2em]
 		Fuel & {\small \gls{MOX} (89\% Tailings, 11\% Separated Pu)}\\
 		\hline
 	\end{tabularx}
-	\caption {\gls{SFR} ASTRID Specifications \cite{marsaultmarie-sophie_pre-conceptual_2012}}
+	\caption {\gls{SFR} ASTRID Parameters \cite{marsaultmarie-sophie_pre-conceptual_2012}}
 	\label{tab:sfr}
 \end{table}
 \end{frame}

@@ -7,11 +7,11 @@
 \documentclass[9pt]{beamer}
 \usetheme[white]{Illinois}
 %\title[short title]{long title}
-\title[Short Title]{Synergistic Spent Nuclear Fuel Dynamics Within the European Union}
+\title[Synergistic Spent Nuclear Fuel Dynamics Within the European Union]{Synergistic Spent Nuclear Fuel Dynamics Within the European Union}
 %\subtitle[short subtitle]{long subtitle}
-\subtitle[Short SubTitle]{French Transition into SFRs}
+\subtitle[French Transition into SFRs]{French Transition into SFRs}
 %\author[short name]{long name}
-\author[Your Name]{Jin Whan Bae, Kathyrn Huff, Clifford Singer \\ Advanced Reactors and Fuel Cycles Group}
+\author[Jin Whan Bae, Kathryn Huff, Clifford Singer]{Jin Whan Bae, Kathryn Huff, Clifford Singer \\ Advanced Reactors and Fuel Cycles Group}
 %\date[short date]{long date}
 \date[10.22.2017]{October 22, 2017}
 %\institution[short name]{long name}
@@ -55,8 +55,11 @@
 \usepackage{booktabs} % nice rules (thick lines) for tables
 \usepackage{microtype} % improves typography for PDF
 \usepackage{xspace}
-
 \usepackage{tabularx}
+\usepackage[affil-it]{authblk}
+\usepackage{tikz}
+\usepackage{cleveref}
+\usepackage{datatool}
 \newcolumntype{b}{X}
 \newcolumntype{s}{>{\hsize=.5\hsize}X}
 \newcolumntype{m}{>{\hsize=.75\hsize}X}
@@ -68,12 +71,8 @@
 \newcommand{\ud}{\mathop{}\!\mathrm{d}} % upright derivative symbol
 \newcommand{\Cyclus}{\textsc{Cyclus}\xspace}%
 \graphicspath{ {images/} }
-\usepackage[affil-it]{authblk}
-\usepackage{tikz}
 \usetikzlibrary{positioning, arrows, decorations, shapes }
-\usepackage{cleveref}
 
-\usepackage{datatool}
 \begin{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% From uw-beamer Here's a handy bit of code to place at 
@@ -111,15 +110,17 @@
 \section{Scenario Specification}
 \input{case_specification}
 
-\section{Future Predictions}
+\section{Predictions}
 \input{future}
 
 \section{Results}
 \input{results}
 
-\section{Conclusion / Discussion}
+\section{Conclusion}
 \input{conclusion}
 
+\section{Appendix}
+\input{appendix}
 
 %%--------------------------------%%
 %%--------------------------------%%
