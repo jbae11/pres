@@ -9,12 +9,12 @@
 		\begin{tabular}{cccc}
 			\hline
 			\textbf{Category } & \textbf{Value} & \textbf{Unit} & \textbf{Specifics}\\ \hline
-			Total UOX Usage  & 167,495 & MTHM &  \\ 
-			Total MOX Usage  & 7,842 & MTHM & \\ 
-			Total Used UOX Stored  & 104,091 & MTHM & \gls{UNF} that is not reprocessed\\  
-			Total Used UOX Stored (France) & 5,848 & MTHM & \gls{UNF} that is not reprocessed \\
-			Total Tailings  & 1,006,300 & MTHM & \\ 
-			Total Natural U Used  & 1,181,706 & MTHM & \\ \hline
+			Total UOX Usage  & 79,500 & MTHM &  \\ 
+			Total MOX Usage  & 4,053 & MTHM & \\ 
+			Total Used UOX Stored  & 110,013 & MTHM & \gls{UNF} that is not reprocessed\\  
+			Total Used UOX Stored (France) & 22,824 & MTHM & \gls{UNF} that is not reprocessed \\
+			Total Tails  & 1,086,903 & MTHM & \\ 
+			Total Natural U Used  & 1,266,403 & MTHM & \\ \hline
 		\end{tabular}}
 		\caption{Simulation Results for Historical Nuclear Operation 
 		of \gls{EU} Nations}
@@ -60,11 +60,11 @@
 \begin{frame}
 	\frametitle{SFR Deployment with Legacy UNF}
 	\begin{itemize}
-		\item Reprocessing UNF from all EU nations can start approx. 265 SFRs.
+		\item Reprocessing UNF from all EU nations can start approx. 202 SFRs.
 		\item Two generations of 66GWe SFRs = 220 SFRs
 		\item Breeding Ratio of SFRs over one. ($\frac{23.95}{22.0} = 1.088$)
 		\item Initial Pu loading of $4.9$ tons for ASTRID-type SFR \cite{varaine_pre-conceptual_2012}.
-		\item $\frac{Pu \ from \ legacy \ \gls{UNF}}{4.9} \approx 265$
+		\item $\frac{Pu \ from \ legacy \ \gls{UNF}}{4.9} \approx 202$
 	\end{itemize}
 \end{frame}
 
@@ -79,13 +79,13 @@
 			\textbf{Category} & \textbf{Unit} & \textbf{Value}  \\ \hline
 			Total MOX used & MTHM & 63,820  \\ 
 			Total \glspl{SFR} Deployed & & 220 \\ 
-			Total Plutonium Reprocessed & MTHM & 17,303 \\ 
-			Total MOX from UOX Waste & MTHM & 3,056  \\ 
-			Total MOX from MOX Waste & MTHM  & 60,763 \\ 
-			Total Tails used & MTHM & 58,076 \\ 
-			Total legacy UNF reprocessed & MTHM & 71,726 \\ 
-			Total Reprocessed Uranium Stockpile & MTHM & 150,098 \\ 
-			Total Raffinate & MTHM & 17,303 \\ \hline
+			Total Plutonium Reprocessed & MTHM & 15,230 \\ 
+			Total \gls{ASTRID} fuel from UOX Waste & MTHM & 3,056  \\ 
+			Total \gls{ASTRID} fuel from MOX Waste & MTHM  & 60,763 \\ 
+			Total Tails used & MTHM & 49,779 \\ 
+			Total legacy UNF reprocessed & MTHM & 56,584 \\ 
+			Total Reprocessed Uranium Stockpile & MTHM & 184,789 \\ 
+			Total Raffinate & MTHM & 35,834 \\ \hline
 		\end{tabular}}
 		\caption {\gls{SFR} Simulation Results}
 		\label{tab:sfr_sim_result}
@@ -102,7 +102,7 @@
 	\begin{center}
 		\includegraphics[width=\textwidth]{./images/french-transition/where_fuel.png}
 	\end{center}
-	\caption{Timeseries of fuel loaded into \glspl{SFR}}
+	\caption{Timeseries of fuel loaded into \glspl{SFR}, separated by origin}
 	\label{fig:fuel}
 \end{minipage}
 \hspace{.5cm}
@@ -110,6 +110,28 @@
 	\centering
 		\includegraphics[width=\linewidth]{./images/french-transition/pu.png}
 	\caption{Separated plutonium discharge from Reprocessing Plant}
+	\label{fig:pu_no_cum}
+\end{minipage}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Material Flow in French Transition Scenario}
+	
+\begin{figure}[htbp!]
+\begin{minipage}[b]{.45\linewidth}
+	\begin{center}
+		\includegraphics[width=\textwidth]{./images/french-transition/raffinate.png}
+	\end{center}
+	\caption{Timeseries of raffinate discharge from reprocessing plants}
+	\label{fig:fuel}
+\end{minipage}
+\hspace{.5cm}
+\begin{minipage}[b]{.45\linewidth}
+	\centering
+		\includegraphics[width=\linewidth]{./images/french-transition/raffinate_cum.png}
+	\caption{Cumulative raffinate inventory separated by origin}
 	\label{fig:pu_no_cum}
 \end{minipage}
 \end{figure}

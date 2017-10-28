@@ -1,29 +1,28 @@
 \subsection{Assumptions}
 
 \begin{frame}
-	\frametitle{Assumptions}
-	\begin{itemize}
-		\item Fuel cycle facility parameters (throughput, availability)
-		\item Compositions of fresh and spent fuel
-		\item Material flow
-	\end{itemize}
+    \frametitle{Assumptions}
+    \begin{itemize}
+        \item Fuel cycle facility parameters (throughput, availability)
+        \item Compositions of fresh and spent fuel
+        \item Material flow
+    \end{itemize}
 \end{frame}
 
 \begin{frame}
-	\frametitle{Assumptions}
-	\begin{itemize}
-		\item SFR technology available for deployment in 2040.
-		\item Reactor construction is always completed on time.
-		\item Separated uranium is unused and stockpiled.
-		\item LWRs have a lifetime of 60 years, unless shut down prematurely.
-		\item SFRs have a lifetime of 80 years.
-	\end{itemize}
-	For the French Transition Scenario:
-	\begin{itemize}
-		\item Reprocessing and fabrication begins 2020
-		\item French nuclear capacity remains constant at 66,000 MWe
-		\item Reprocessing and fabrication capacity is unlimited.
-	\end{itemize}
+    \frametitle{Assumptions}
+    \begin{itemize}
+        \item SFR technology available for deployment in 2040.
+        \item Reactor construction is always completed on time.
+        \item Separated uranium is unused and stockpiled.
+        \item LWRs have a lifetime of 60 years, unless shut down prematurely.
+        \item SFRs have a lifetime of 80 years.
+    \end{itemize}
+    For the French Transition:
+    \begin{itemize}
+        \item Reprocessing and fabrication begins 2020
+        \item French nuclear capacity remains constant at 66,000 MWe
+    \end{itemize}
 \end{frame}
 
 %tikz styling definitions
@@ -39,8 +38,8 @@ minimum height=2em]
 \subsection{Simulation Parameters}
 
 \begin{frame}
-	\frametitle{Material Flow}
-	
+    \frametitle{Material Flow}
+    
 \begin{figure}
         \begin{adjustbox}{max totalsize={0.9\textwidth}{.8\textheight}, center}
                 \begin{tikzpicture}[align=center, node distance = 3cm and 3cm, auto]
@@ -99,68 +98,63 @@ minimum height=2em]
 \end{frame}
 
 \begin{frame}
-	\frametitle{First Simulation - EU Nuclear Opearations \textasciitilde 2050}
-	Deployment and Reactor data from \gls{IAEA} \gls{PRIS}.
-	Reprocessing plant and fabrication plant modeled after French La Hague and MELOX site
-	\cite{schneider_spent_2008, hugelmann_melox_1999}.
-		
+    \frametitle{EU Nuclear Opearations \textasciitilde 2050}
+    Deployment and Reactor data from \gls{IAEA} \gls{PRIS}.
+    Reprocessing plant and fabrication plant modeled after French La Hague and MELOX site
+    \cite{schneider_spent_2008, hugelmann_melox_1999}.
+        
 \begin{table}[h]
-	\centering
-	\begin{tabularx}{\textwidth}{bb}
-		\hline
-		Parameter & Value \\
-		\hline
-		Simulation Start Year & 1970   \\
-		Simulation End Year & 2050  \\ 
-		Reprocessing Capacity & 91.6 [MTHM \gls{UNF} per month] \cite{schneider_spent_2008}  \\
-		Reprocessing Efficiency & 99.8 [\%] \\
-		Reprocessing Streams & Plutonium and Uranium  \\
-		\gls{MOX} Fabrication & \small{9\% Reprocessed Pu + 91\% Depleted U} \\
-		\gls{MOX} Fabrication Throughput & 16.25 [MTHM \gls{MOX} per month]  \cite{hugelmann_melox_1999} \\
-		\gls{MOX} Fuel Reprocessing Stage &  Used \gls{MOX} is not reprocessed. \\  
-		Reprocessed Uranium Usage &  None. Stockpile reprocessed U \\
-		\hline
-	\end{tabularx}
-	\caption {Parameter for Historical Operation of \gls{EU} Case}
-	\label{tab:sim_eu}
+    \centering
+    \begin{tabularx}{\textwidth}{bb}
+        \hline
+        Parameter & Value \\
+        \hline
+        Simulation Start Year & 1970   \\
+        Simulation End Year & 2160  \\ 
+        Reprocessing Capacity & 91.6 [MTHM \gls{UNF} per month] \cite{schneider_spent_2008}  \\
+        Reprocessing Efficiency & 99.8 [\%] \\
+        Reprocessing Streams & Plutonium and Uranium  \\
+        \gls{MOX} Fabrication & \small{9\% Reprocessed Pu + 91\% Depleted U} \\
+        \gls{MOX} Fabrication Throughput & 16.25 [MTHM \gls{MOX} per month]  \cite{hugelmann_melox_1999} \\
+        \gls{MOX} Fuel Reprocessing Stage &  Used \gls{MOX} is not reprocessed. \\  
+        Reprocessed Uranium Usage &  None. Stockpile reprocessed U \\
+        \hline
+    \end{tabularx}
+    \caption {Parameter for Historical Operation of \gls{EU} Case (\textasciitilde 2040)}
+    \label{tab:sim_eu}
 \end{table}
-	
+    
 \end{frame}
 
 \begin{frame}
-	\frametitle{Second Simulation - French Transition to SFRs \textasciitilde 2160}
-	
+    \frametitle{French Transition to SFRs \textasciitilde 2160}
+    
 \begin{table}[h]
-	\centering
-	\begin{tabularx}{\textwidth}{bb}
-		\hline
-		Parameter & Value \\
-		\hline
-		Simulation Time & 1970-2160 \\
-		\gls{SFR} Available Year & 2040 \\
-		Reprocessing Capacity & $\infty$ \\
-		Reprocessing and Fabrication Begins & 2020 \\
-		Separation Efficiency & 99.8 [\%] \\
-		Reprocessing Streams & plutonium and uranium \\
-		\small{Used \gls{UOX} Inventory} & 144,437 [MTHM] {\small (From first simulation)} \\
-		\small{Additional Used \gls{UOX} or Depleted U} & None  \\
-		\gls{MOX} Fabrication &  \small{22\% Reprocessed Pu + 78\% Depleted U}  \\
-		\gls{MOX} Fabrication Throughput & $\infty$ \\
-		\gls{MOX} Fuel Reprocessing Stage &  Used \gls{MOX} gets reprocessed infinitely. \\
-		Reprocessed Uranium Usage &  None. Stockpile reprocessed U. \\
-		\hline
-	\end{tabularx}
-	\caption {Parameter for French Transition to \gls{SFR} case }
-	\label{tab:sim_france}
+    \centering
+    \begin{tabularx}{\textwidth}{bb}
+        \hline
+        Parameter & Value \\
+        \hline
+        \gls{SFR} Available Year & 2040 \\
+        Reprocessing and Fabrication Begins & 2020 \\
+        Separation Efficiency & 99.8 [\%] \\
+        Reprocessing Streams & plutonium and uranium \\
+        \gls{MOX} Fabrication &  \small{22\% Reprocessed Pu + 78\% Depleted U}  \\
+        \gls{MOX} Fuel Reprocessing Stage &  Used \gls{MOX} gets reprocessed infinitely. \\
+        Reprocessed Uranium Usage &  None. Stockpile reprocessed U. \\
+        \hline
+    \end{tabularx}
+    \caption {Parameter for French Transition to \gls{SFR}}
+    \label{tab:sim_france}
 \end{table}
 
 \end{frame}
 
 
 \begin{frame}
-	\frametitle{Reactor Parameters - \glspl{LWR} }
-	Number of assemblies are linearly adjusted from a model 1,000 MWe reactor.
-	\begin{table}[h]
+    \frametitle{Reactor Parameters - \glspl{LWR} }
+    Number of assemblies are linearly adjusted from a model 1,000 MWe reactor.
+    \begin{table}[h]
     \centering
     \begin{tabularx}{\textwidth}{bccc}
         \hline
@@ -182,25 +176,25 @@ minimum height=2em]
 
 
 \begin{frame}
-	\frametitle{Reactor Parameters - ASTRID-type SFRs}
-	
+    \frametitle{Reactor Parameters - ASTRID-type SFRs}
+    
 \begin{table}[h]
-	\centering
-	\begin{tabularx}{\textwidth}{bb}
-		\hline
-		Parameter & Value \\
-		\hline
-		SFR Cycle Time & 12 months \\ 
-		SFR Refueling Outage & 2 months \\
-		Fuel Mass per Batch & 5568 kg \\
+    \centering
+    \begin{tabularx}{\textwidth}{bb}
+        \hline
+        Parameter & Value \\
+        \hline
+        SFR Cycle Time & 12 months \\ 
+        SFR Refueling Outage & 2 months \\
+        Fuel Mass per Batch & 5,568 kg \\
         Initial Pu Loading & 4.9 Tons \\
-		Batch per Core & 4 \\
-		Power Output & 600 MWe \\
-		lifetime & 80 years \\
-		Fuel & {\small \gls{MOX} (78\% Tailings, 22\% Separated Pu)}\\
-		\hline
-	\end{tabularx}
-	\caption {\gls{SFR} ASTRID Parameters \cite{varaine_pre-conceptual_2012}}
-	\label{tab:sfr}
+        Batch per Core & 4 \\
+        Power Output & 600 MWe \\
+        lifetime & 80 years \\
+        Fuel & {\small \gls{MOX} (78\% Tails, 22\% Separated Pu)}\\
+        \hline
+    \end{tabularx}
+    \caption {\gls{SFR} ASTRID Parameters \cite{varaine_pre-conceptual_2012}}
+    \label{tab:sfr}
 \end{table}
 \end{frame}
