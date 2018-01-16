@@ -75,6 +75,8 @@
 \newcolumntype{m}{>{\hsize=.75\hsize}X}
 
 \newcommand{\Cyclus}{\textsc{Cyclus}\xspace}%
+\newcommand{\hfh}{$HfH_{x}$\xspace}
+\newcommand{\bc}{$B_4C$\xspace}
 \graphicspath{ {images/} }
 \usetikzlibrary{positioning, arrows, decorations, shapes }
 
@@ -146,7 +148,7 @@ Continued absorption integrity and low induced radioactivity after irradiation.
   \begin{center}
       \includegraphics[scale=0.2]{./images/decay_chain.png}
   \end{center}
-  \caption{Nuclear transmutation of halfnium nuclides by capture. Ta-181 is stable and Hf-182
+  \caption{Nuclear transmutation of hafnium nuclides by capture. Ta-181 is stable and Hf-182
             has a half life of 8.9e6 years}
   \label{fig:dec}
 \end{figure}
@@ -154,7 +156,7 @@ Continued absorption integrity and low induced radioactivity after irradiation.
 
 \begin{frame}
 \frametitle{Hafnium as an absorber - 3/3}
-Other peripheral beneficial characteristics of halfnium include:
+Other peripheral beneficial characteristics of hafnium include:
 \begin{itemize}
   \item Malleability, ductility
   \item Rich reserve of raw materials
@@ -170,17 +172,18 @@ Other peripheral beneficial characteristics of halfnium include:
 \begin{frame}
 \frametitle{Codes and Libraries}
 \begin{itemize}
+\item Unified 70-group fast set of group constants ADJ2000R \cite{hazama_development_2002}
 \item Diffusion Code (TRISTAN)
   \begin{itemize}
     \item verified with CITATION from \gls{ORNL}.
   \end{itemize}
-\item Perturbation Code (TRI-PERT)
+\item Perturbation Code (TRI-PERT) 
   \begin{itemize}
   \item nuclear characteristics
   \end{itemize}
-\item Effects of reactor constants and heterogeneity of control rod structure (GMVP)
+\item Effects of reactor constants and heterogeneity of control rod structure (GMVP) \cite{nagaya_mvp/gmvp_2005}
 \item Depletion of hafnium (JFS3-J3.3)
-\item Heating density of hafnium hydride absorber (MCNP-5)
+\item Heating density of hafnium hydride absorber (MCNP-5) \cite{mcnp_monte_2003}
 \item Nuclear Data (ENDL92 for Hf and ENDF-VI for others)
 \end{itemize}
 \end{frame}
@@ -188,17 +191,215 @@ Other peripheral beneficial characteristics of halfnium include:
 \begin{frame}
 \frametitle{Core simulation with hafnium control rods}
 Hafnium hydride control rods replaced the boron carbide in the
-\gls{JSFR} for comparison, with U-TRU mixed oxide fuel.
+\gls{JSFR} \cite{ogura_conceptual_2009} for comparison, with U-TRU mixed oxide fuel \cite{ikeda_application_2014}.
 
 \begin{figure}[htbp!]
   \begin{center}
-      \includegraphics[scale=0.18]{./images/core.png}
+      \includegraphics[scale=0.15]{./images/core.png}
   \end{center}
   \caption{Core diagram of the \gls{JSFR}.}
   \label{fig:core}
 \end{figure}
 
 \end{frame}
+
+
+\section{Results}
+
+
+\begin{frame}
+\frametitle{Reactivity of \hfh control rods}
+Reactivity similar to 80\% B-10 enriched boron carbide rods.
+Enhanced control rod reactivity with hydrogen moderation of neutrons.
+\begin{figure}[htbp!]
+  \begin{center}
+      \includegraphics[scale=0.5]{./images/spectrum.png}
+  \end{center}
+  \caption{Neutron spectrum of the hafnium hydride control rod}
+  \label{fig:spec}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{\hfh control rod irradiation and performance change - 1/2}
+Neutron absorption performance degrades very little with irradiation
+because the produced isotopes are also absorbers.
+\begin{figure}[htbp!]
+  \begin{center}
+      \includegraphics[scale=0.5]{./images/irrad_isotope.png}
+  \end{center}
+  \caption{Change of hafnium isotope ratio in the control rod during irradiation.}
+  \label{fig:irrad_iso}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{\hfh control rod irradiation and performance change - 2/2}
+Reactivity degradation is 4\% after 2400 \gls{EFPD}
+\begin{figure}[htbp!]
+  \begin{center}
+      \includegraphics[scale=0.5]{./images/irrad_reac.png}
+  \end{center}
+  \caption{Capture reaction rate and reactivity of hafnium hydride control rod.}
+  \label{fig:irrad_reac}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Heat profile in \hfh  control rod}
+Neutron-induced energy of the absorber is approximately twice as large as \bc
+Limit of 800$^\circ$C to prevent hydrogen desorption.
+Maximum absorber temperature = 631$^\circ$C
+\begin{figure}[htbp!]
+  \begin{center}
+      \includegraphics[scale=0.28]{./images/th.png}
+  \end{center}
+  \caption{Thermal hydraulic characteristics in the hafnium hydride control rod deployed reactor.}
+  \label{fig:th}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Changes in reactor with \hfh control rod}
+Nuclear characteristics as good as or better than with \bc.
+\begin{figure}[htbp!]
+  \begin{center}
+      \includegraphics[scale=0.25]{./images/reac.png}
+  \end{center}
+  \caption{Nuclear characteristics of the reactors with the hafnium hydride and the boron carbide absorber.}
+  \label{fig:reac}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Heat density of \hfh}
+Twice the heat generation of \bc, but peak of heat densities are comparable
+due to hydrogen moderation and gamma-ray transport.
+\begin{figure}[htbp!]
+  \begin{center}
+      \includegraphics[scale=0.3]{./images/gamma.png}
+  \end{center}
+  \caption{Effect of gamma transport in the linear heat rate of \hfh absorber.}
+  \label{fig:reac}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Design requirements of \gls{SFR}}
+    \begin{table}[h]
+      \centering 
+      \begin{tabularx}{\textwidth}{mb}
+      \hline
+      Requirement & Benefit from using \hfh \\ 
+      \hline
+      Intrinsic negative feedback &     \\ 
+      Na void reactivity $\leq$ \$6 & \$5.1\\ 
+      Coolant flow &  8\% less at cladding temperature limit  \\
+      Shutdown abilities &  \\ 
+      Hydrogen desorption & future work\\ 
+      Off-normal events & future work \\ 
+      \hline
+      \end{tabularx}
+      \caption {Benefits of using \hfh in \gls{SFR} relative to \bc}
+      \label{tab:ben}
+    \end{table}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Important Results and Conclusion}
+\begin{itemize}
+  \item Longer lifetime due to hafnium isotopes after neutron absorption
+  \item Hydrogen increase of reactivity
+  \item 9 years lifetime (compared with 1-2 year for \bc)
+  \item Better reactor parameters (flow rate, safety margin, breeding ratio etc.)
+  \item Better thermal heat profile during operation
+\end{itemize}
+\end{frame}
+
+\section{Critique}
+
+\begin{frame}
+\frametitle{Missing}
+\begin{itemize}
+  \item Quantification of intrinsic negative feedback
+  \item 
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Relevance}
+\begin{itemize}
+  \item
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Novelty}
+\begin{itemize}
+  \item
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Technical Detail}
+\begin{itemize}
+  \item
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Analytic Rigour}
+\begin{itemize}
+  \item
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Verifiability (Reproducibility)}
+\begin{itemize}
+  \item
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Clarity}
+\begin{itemize}
+  \item
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Miscellaneous}
+\begin{itemize}
+  \item
+\end{itemize}
+\end{frame}
+
+\section{Extension}
+
+
+\begin{frame}
+\frametitle{Future Work}
+\begin{itemize}
+  \item hydrogen desorption in operating conditions
+  \item accident scenarios
+    leads to higher core / control rod temperature -> desorption -> less reactivity -> worse
+  \item uncertainty quantification
+  \item Swelling of control rod
+  \item 
+\end{itemize}
+
+\end{frame}
+
 
 
 %%--------------------------------%%
