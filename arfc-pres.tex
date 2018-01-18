@@ -170,10 +170,16 @@ Other peripheral beneficial characteristics of hafnium include:
 \begin{frame}
 \frametitle{Objectives}
 Demonstrate the feasibility and benefits of using a \hfh control rod
-over a \bc control rod.
+over a \bc control rod in a \gls{JSFR} by comparing various metrics.
+Metrics include:
 \begin{itemize}
-    \item General material characteristics (nuclear properties)
-    \item \gls{JSFR} performance metrics
+    \item Reactor nuclear characteristic ( Enrichment, Na void reactivity, etc.)
+    \item Coolant flow rate
+    \item Hydrogen desorption
+    \item Control rod performance over time (irradiation)
+    \item Linear heat rate
+    \item Reactivity
+    \item Temperature distribution
 \end{itemize}
 \end{frame}
 
@@ -181,7 +187,7 @@ over a \bc control rod.
 \section{Methodology}
 
 \begin{frame}
-\frametitle{Codes and Libraries}
+\frametitle{Deterministic Method (Codes and Libraries)}
 \begin{itemize}
 \item Unified 70-group fast set of group constants ADJ2000R \cite{hazama_development_2002}
 \item Diffusion Code (TRISTAN)
@@ -199,6 +205,7 @@ over a \bc control rod.
 \end{itemize}
 \end{frame}
 
+
 \begin{frame}
 \frametitle{Core simulation with hafnium control rods}
 Hafnium hydride control rods replaced the boron carbide in the
@@ -214,7 +221,18 @@ Hafnium hydride control rods replaced the boron carbide in the
 
 \end{frame}
 
+\begin{frame}
+\frametitle{Assumptions}
+\begin{itemize}
+    \item Pu enrichments so that excess reactivity \textasciitilde 0.2\% 
+    \item ratio of H to Hf is constant (no hydrogen desorption)
+    \item Transmutation from H-180 to Hf-181, or Ta-181 neglected.
+    \item temperature of cladding limited to 600$^\cdot$C
+    \item Absorber pellet limited 800$800^\cdot$C for hydrogen desorption
+    \item No swelling of \hfh control rod
+\end{itemize}
 
+\end{frame}
 
 
 \section{Results}
@@ -338,9 +356,6 @@ due to hydrogen moderation and gamma-ray transport.
 \frametitle{Missing}
 \begin{itemize}
   \item Quantification of intrinsic negative feedback
-  \begin{itemize}
-      \item Inherent safety is a characteristic of reactor, not control rod
-  \end{itemize}
   \item Energy in cross section values
   \item 
 \end{itemize}
