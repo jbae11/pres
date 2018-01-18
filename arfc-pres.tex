@@ -13,7 +13,7 @@
 %\author[short name]{long name}
 \author[Kazumi Ikeda, Hiroyuki Moriwaki, Yoshiyuki Ohkubo, Tomohiko Iwasaki, Kennji Konashi]{Kazumi Ikeda, Hiroyuki Moriwaki, Yoshiyuki Ohkubo, Tomohiko Iwasaki, Kennji Konashi}
 %\date[short date]{long date}
-\date[01.23.2018]{January 23, 2018}
+\date[07.08.2014]{Accepted: July 08, 2014}
 %\institution[short name]{long name}
 \institute[]{}
 
@@ -115,13 +115,14 @@
 
 \begin{frame}
 \frametitle{Motivation}
-Need for a control rod with a longer lifetime
+Need for a control rod with a longer lifetime in Sodium-cooled Fast Reactors
 \begin{itemize}
   \item Current \gls{SFR} designs use 80\% B-10 enriched  boron carbide
   \begin{itemize}
-    \item Swell due to accumulation of He and Li produced by (n,$\alpha$)
+    \item Swelling due to accumulation of He and Li produced by (n,$\alpha$)
     \item He buildup in the gas plenum
-    \item Degradation of control rod worth (lifetime \textasciitilde 2 years)
+    \item Degradation of control rod worth with irradiation
+    \item Lifetime \textasciitilde 2 years
   \end{itemize}
 \end{itemize}
 \end{frame}
@@ -186,31 +187,54 @@ Metrics include:
 
 \section{Methodology}
 
+
 \begin{frame}
-\frametitle{Deterministic Method (Codes and Libraries)}
+\frametitle{Previous Work}
+6-year study of \hfh control rod feasibility
 \begin{itemize}
-\item Unified 70-group fast set of group constants ADJ2000R \cite{hazama_development_2002}
+    \item fabrication tests \cite{konashi_study_2010}
+    \item property measurements \cite{konashi_utilization_2010}
+    \item irradiation tests, designs \cite{konashi_environmentally_2012}
+    \item in-pile tests for high-temperature stability \cite{hirai_study_2010}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Deterministic Method for reactor design}
+\begin{itemize}
+\item Unified 70-group fast set of group constants (ADJ2000R) \cite{hazama_development_2002}
 \item Diffusion Code (TRISTAN)
   \begin{itemize}
-    \item verified with CITATION from \gls{ORNL}.
+    \item verified with (CITATION) from \gls{ORNL}.
   \end{itemize}
 \item Perturbation Code (TRI-PERT) 
   \begin{itemize}
   \item nuclear characteristics
   \end{itemize}
-\item Effects of reactor constants and heterogeneity of control rod structure (GMVP) \cite{nagaya_mvp/gmvp_2005}
 \item Depletion (JFS3-J3.3)
 \item Heating density of hafnium hydride absorber (MCNP-5) \cite{mcnp_monte_2003}
 \item Nuclear Data (ENDL92 for Hf and ENDF-VI for others)
 \end{itemize}
 \end{frame}
 
+\begin{frame}
+\frametitle{Monte Carlo Method}
+\begin{itemize}
+    \item Effects of reactor constants and heterogeneity of control rod structure (MVP, GMVP) \cite{nagaya_mvp/gmvp_2005}  
+    \begin{itemize}
+        \item Neutron and photon transport
+        \item Based on continuous energy and multigroup methods
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+
 
 \begin{frame}
 \frametitle{Core simulation with hafnium control rods}
 Hafnium hydride control rods replaced the boron carbide in the
 \gls{JSFR} \cite{ogura_conceptual_2009} for comparison, with U-TRU mixed oxide fuel \cite{ikeda_application_2014}.
-
 \begin{figure}[htbp!]
   \begin{center}
       \includegraphics[scale=0.15]{./images/core.png}
@@ -218,7 +242,6 @@ Hafnium hydride control rods replaced the boron carbide in the
   \caption{Core diagram of the \gls{JSFR}.}
   \label{fig:core}
 \end{figure}
-
 \end{frame}
 
 \begin{frame}
@@ -231,7 +254,6 @@ Hafnium hydride control rods replaced the boron carbide in the
     \item Absorber pellet limited 800$800^\cdot$C for hydrogen desorption
     \item No swelling of \hfh control rod
 \end{itemize}
-
 \end{frame}
 
 
@@ -350,55 +372,47 @@ due to hydrogen moderation and gamma-ray transport.
 \end{itemize}
 \end{frame}
 
-\section{Critique}
+\section{Assessment}
 
 \begin{frame}
 \frametitle{Missing}
 \begin{itemize}
-  \item Quantification of intrinsic negative feedback
+  \item Quantification of intrinsic negative feedback change
   \item Energy in cross section values
+  \item Uncertainty and transient scenarios
   \item 
 \end{itemize}
 \end{frame}
 
 \begin{frame}
-\frametitle{Relevance}
+\frametitle{Relevance and Novelty}
 \begin{itemize}
   \item Reactor performance metric change with control rod
   \item Improvements on \gls{SFR} design
+  \item Improvements on control rod lifetime and performance
+  \item Reduction in low-level waste
+    \begin{itemize}
+        \item Less radiotoxicity from used control rods
+        \item Longer lifetime = less waste
+    \end{itemize}
 \end{itemize}
 \end{frame}
 
-
-
 \begin{frame}
-\frametitle{Novelty}
+\frametitle{Technical Detail and Analytic Rigor}
 \begin{itemize}
-  \item 
+    \item Reactivity and `nuclear characteristics' of \gls{JSFR}
+    \item Thermal profile of reactor and control rod
+    \item Lacking in transient scenarios
 \end{itemize}
 \end{frame}
 
 
-\begin{frame}
-\frametitle{Technical Detail}
-\begin{itemize}
-  \item
-\end{itemize}
-\end{frame}
-
-
-\begin{frame}
-\frametitle{Analytic Rigour}
-\begin{itemize}
-  \item
-\end{itemize}
-\end{frame}
-
-
-\begin{frame}
+fa\begin{frame}
 \frametitle{Verifiability (Reproducibility)}
 \begin{itemize}
-  \item
+  \item Codes are well-known and published
+  \item Input files unavailable
 \end{itemize}
 \end{frame}
 
@@ -406,17 +420,14 @@ due to hydrogen moderation and gamma-ray transport.
 \begin{frame}
 \frametitle{Clarity}
 \begin{itemize}
-  \item
+  \item Grammatical mistakes 
+  \item Confusing noun-verb relationship
+  \item Run-on sentences ("Futhermore the comparison with the B-10 enriched boron carbide rods.")
+  \item Lengthy explanation would be much more concise in tables.
+  \item Abstract represents the conclusion well.
 \end{itemize}
 \end{frame}
 
-
-\begin{frame}
-\frametitle{Miscellaneous}
-\begin{itemize}
-  \item
-\end{itemize}
-\end{frame}
 
 \section{Extension}
 
@@ -429,12 +440,19 @@ due to hydrogen moderation and gamma-ray transport.
     leads to higher core / control rod temperature -> desorption -> less reactivity -> worse
   \item uncertainty quantification
   \item Swelling of control rod
-  \item 
 \end{itemize}
 
 \end{frame}
 
-
+\begin{frame}
+\frametitle{Related to Fuel Cycles and Waste Management}
+\begin{itemize}
+    \item \gls{MA} (namely Am) transmutation improvement with hydride \cite{ikeda_feasibility_2017}
+    \begin{itemize}
+      \item Am-241 major decay heat contributor for medium-to-long term disposal
+    \end{itemize}
+\end{itemize}
+\end{frame}
 
 %%--------------------------------%%
 %%--------------------------------%%
