@@ -115,6 +115,29 @@
 
 \begin{frame}
 \frametitle{Motivation}
+\gls{SFR} is being pursued as Japan's next-generation nuclear reactor.
+\begin{itemize}
+    \item Inherent safety features
+    \begin{itemize}
+        \item Net negative reactivity feedback with temperature rise
+    \end{itemize}
+    \item Better thermal and neutronics properties
+    \begin{itemize}
+        \item Larger temperature outlier for liquid sodium (371 - 1156K)
+        \item Atmospheric operating pressure
+        \item Low neutron absorption of Na
+        \item Better heat transfer
+        \item Higher efficiency
+    \end{itemize}
+    \item Breeding of fissile material
+    \item 'Closing' the fuel cycle
+    \item Actinide burning (fueled by TRU-NatU)
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Motivation}
 Need for a control rod with a longer lifetime in Sodium-cooled Fast Reactors
 \begin{itemize}
   \item Current \gls{SFR} designs use 80\% B-10 enriched  boron carbide
@@ -374,14 +397,6 @@ due to hydrogen moderation and gamma-ray transport.
 
 \section{Assessment}
 
-\begin{frame}
-\frametitle{Missing}
-\begin{itemize}
-  \item Quantification of intrinsic negative feedback change
-  \item Uncertainty and transient scenarios
-  \item 
-\end{itemize}
-\end{frame}
 
 \begin{frame}
 \frametitle{Relevance and Novelty}
@@ -407,7 +422,7 @@ due to hydrogen moderation and gamma-ray transport.
 \end{frame}
 
 
-fa\begin{frame}
+\begin{frame}
 \frametitle{Verifiability (Reproducibility)}
 \begin{itemize}
   \item Codes are well-known and published
@@ -428,6 +443,21 @@ fa\begin{frame}
 \end{frame}
 
 
+\begin{frame}
+\frametitle{Technical Gaps}
+\begin{itemize}
+    \item Multiplication factor
+    \item Non-normal operation
+    \begin{itemize}
+        \item Large temperature shift effect
+        \itme Hydrogen desorption
+        \item Loss of control reactivity worth due to decrease in absorption
+    \end{itemize}
+    \item Swelling of hafnium hydride
+    \item Flux profile of reactor
+\end{itemize}
+\end{frame}
+
 \section{Extension}
 
 
@@ -439,8 +469,10 @@ fa\begin{frame}
     leads to higher core / control rod temperature -> desorption -> less reactivity -> worse
   \item uncertainty quantification
   \item Swelling of control rod
+  \item With the allowance of longer life control rods, 'breed and burn'
+  core designs with a much longer lifetime of 800 EFPD
+  \item Effect of local moderation on used fuel composition and flux
 \end{itemize}
-
 \end{frame}
 
 \begin{frame}
@@ -453,6 +485,8 @@ fa\begin{frame}
 \end{itemize}
 \end{frame}
 
+
+
 %%--------------------------------%%
 %%--------------------------------%%
 \begin{frame}[allowframebreaks]
@@ -462,6 +496,18 @@ fa\begin{frame}
 \end{frame}
 
 %%--------------------------------%%
+
+
+\begin{frame}
+\frametitle{Coolant Cross section}
+\begin{figure}[htbp!]
+  \begin{center}
+      \includegraphics[scale=0.7]{./images/coolant.jpg}
+  \end{center}
+  \caption{Coolant and cross section \cite{stacey_nuclear_2007}}
+  \label{fig:reac}
+\end{figure}
+\end{frame}
 
 
 \end{document}
