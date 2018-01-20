@@ -272,9 +272,9 @@ Hafnium hydride control rods replaced the boron carbide in the
 \begin{itemize}
     \item Pu enrichments so that excess reactivity \textasciitilde 0.2\% 
     \item ratio of H to Hf is constant (no hydrogen desorption)
-    \item Transmutation from H-180 to Hf-181, or Ta-181 neglected.
+    \item Transmutation from Hf-180 to Hf-181, or Ta-181 neglected.
     \item temperature of cladding limited to 600$^\cdot$C
-    \item Absorber pellet limited 800$800^\cdot$C for hydrogen desorption
+    \item Absorber pellet limited $800^\cdot$C for hydrogen desorption
     \item No swelling of \hfh control rod
 \end{itemize}
 \end{frame}
@@ -323,6 +323,19 @@ Reactivity degradation is 4\% after 2400 \gls{EFPD}
 \end{frame}
 
 \begin{frame}
+\frametitle{Changes in reactor with \hfh control rod}
+Nuclear characteristics as good as or better than with \bc.
+\begin{figure}[htbp!]
+  \begin{center}
+      \includegraphics[scale=0.25]{./images/reac.png}
+  \end{center}
+  \caption{Nuclear characteristics of the reactors with the hafnium hydride and the boron carbide absorber.}
+  \label{fig:reac}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}
 \frametitle{Heat profile in \hfh  control rod}
 Neutron-induced energy of the absorber is approximately twice as large as \bc
 Limit of 800$^\circ$C to prevent hydrogen desorption.
@@ -336,17 +349,6 @@ Maximum absorber temperature = 631$^\circ$C
 \end{figure}
 \end{frame}
 
-\begin{frame}
-\frametitle{Changes in reactor with \hfh control rod}
-Nuclear characteristics as good as or better than with \bc.
-\begin{figure}[htbp!]
-  \begin{center}
-      \includegraphics[scale=0.25]{./images/reac.png}
-  \end{center}
-  \caption{Nuclear characteristics of the reactors with the hafnium hydride and the boron carbide absorber.}
-  \label{fig:reac}
-\end{figure}
-\end{frame}
 
 \begin{frame}
 \frametitle{Heat density of \hfh}
@@ -388,7 +390,7 @@ due to hydrogen moderation and gamma-ray transport.
 \frametitle{Important Results and Conclusion}
 \begin{itemize}
   \item Longer lifetime due to hafnium isotopes after neutron absorption
-  \item Hydrogen increase of reactivity
+  \item Hydrogen increase of absorption
   \item 9 years lifetime (compared with 1-2 year for \bc)
   \item Better reactor parameters (flow rate, safety margin, breeding ratio etc.)
   \item Better thermal heat profile during operation
@@ -450,8 +452,8 @@ due to hydrogen moderation and gamma-ray transport.
     \item Non-normal operation
     \begin{itemize}
         \item Large temperature shift effect
-        \itme Hydrogen desorption
-        \item Loss of control reactivity worth due to decrease in absorption
+        \item Hydrogen desorption
+        \item Loss of hydrogen leads to lower control rod worth
     \end{itemize}
     \item Swelling of hafnium hydride
     \item Flux profile of reactor
@@ -462,13 +464,20 @@ due to hydrogen moderation and gamma-ray transport.
 
 
 \begin{frame}
-\frametitle{Future Work}
+\frametitle{Future Work by authors}
 \begin{itemize}
-  \item hydrogen desorption in operating conditions
-  \item accident scenarios
-    leads to higher core / control rod temperature -> desorption -> less reactivity -> worse
-  \item uncertainty quantification
+  \item Hydrogen desorption in operating conditions
+  \item Uncertainty of control rod reactivity
   \item Swelling of control rod
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Potential extension of work}
+\begin{itemize}
+  \item Accident scenarios
+    leading to higher core temperature $\rightarrow$ desorption of hydrogen $\rightarrow$ less control rod worth
   \item With the allowance of longer life control rods, 'breed and burn'
   core designs with a much longer lifetime of 800 EFPD
   \item Effect of local moderation on used fuel composition and flux
@@ -476,14 +485,42 @@ due to hydrogen moderation and gamma-ray transport.
 \end{frame}
 
 \begin{frame}
+\frametitle{Accident Scenarios}
+\gls{ULOFA} - pump trip leading to loss of flow through core, sodium boiling, core meltdown and slumping,
+large reactivity addition and eventual reactor shutdown by core bubble expansion \cite{raghupathy_source_2017}
+\begin{itemize}
+    \item Core temperature higher than 1000$^\cdot$C
+    \item Hydrogen desorption possible in higher temperatures (in-pile tests only consider up to 700$^\cdot$C)
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Preliminary study}
+\begin{enumerate}
+    \item \hfh in higher temperature than 700$^\cdot$C and observe hydrogen desorption with temperature
+    \item Calculate \hfh control rod in-core hydrogen desorption in accident conditions
+    \item Calculate change in control rod worth with hydrogen desorption
+    \item Track core nuclear and thermal metrics
+\end{enumerate}
+\end{frame}
+
+
+
+\begin{frame}
 \frametitle{Related to Fuel Cycles and Waste Management}
 \begin{itemize}
-    \item \gls{MA} (namely Am) transmutation improvement with hydride \cite{ikeda_feasibility_2017}
+    \item \Gls{MA} (namely Am) transmutation improvement with hydride \cite{ikeda_feasibility_2017}
     \begin{itemize}
       \item Am-241 major decay heat contributor for medium-to-long term disposal
     \end{itemize}
 \end{itemize}
 \end{frame}
+
+Reactor Shutdown System - passively released due to curie point effect by abnormal rising of coolant temperature.
+Passive safety -> thermal expansion of absorbing liquid
+gas expansion leads to more neutron leakage
+
 
 
 
