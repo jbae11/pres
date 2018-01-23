@@ -608,7 +608,7 @@ Run core simulation with control rod movement.
 \begin{itemize}
     \item Core axial power distribution with axially-varying control rod
     \item Linear heat rate with axially-varying control rod
-    \item Control rod depletion
+    \item Better insight into control rod depletion
 \end{itemize}
 \end{frame}
 
@@ -660,33 +660,39 @@ Run core simulation with control rod movement.
 \end{itemize}
 \end{frame}
 
+\begin{frame}
+\frametitle{Cheat Sheet - Codes}
+Predictor - corrector method
 
-Predictor - corrector
+Current flux, deplete the fuel, if it is critical.
 
-Current flux, deplete the fuel, if it is critical
-Run another calculation to finds
 
 ENDF JEFF 252 groups 'continuous'
 
 
-SERPENT 2 and SCALE are for doing depletion calculation
-generates homogenized cross section
+SERPENT 2 and SCALE are for doing depletion calculation and
+generates homogenized cross section -
 collapses to 7 group for fast
 
 
-homogenized cross sections to characterize the core
-  criticality values
-  critcial control rod position / ppm for boron
-  fuel depletion
+Homogenized cross sections to characterize the core
+\begin{itemize}
+    \item criticality values
+    \item critcial control rod position / ppm for boron
+    \item fuel depletion
+\end{itemize}
 
-Thermal-hydraulics code
-internal to PARCS
-coupled to TRACE
+Thermal hydraulics that work with PARCS
+\begin{itemize}
+    \item internal to PARCS
+    \item coupled to TRACE
+\end{itemize}
+
 
 Provide reduced number of groups of cross sections to
-Core simulators like PARCS, set delta t
+Core simulators like PARCS, set delta t. 
 adjust critical boron concentration and control rod position.
-
+\end{frame}
 
 \end{document}
 
