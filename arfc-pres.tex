@@ -216,12 +216,22 @@ Metrics include:
 \begin{frame}
 \frametitle{Previous Work}
 6-year study of \hfh control rod feasibility
-\begin{itemize}
-    \item fabrication tests \cite{konashi_study_2010}
-    \item property measurements \cite{konashi_utilization_2010}
-    \item irradiation tests, designs \cite{konashi_environmentally_2012}
-    \item in-pile tests for high-temperature stability \cite{hirai_study_2010}
-\end{itemize}
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=1.2cm]
+\node (fab) [process] {Fabrication Tests \cite{konashi_study_2010}};
+\node (pro) [process, below of=fab] {Property Measurements \cite{konashi_utilization_2010}};
+\node (irr) [process, below of=pro]{Irradiation tests, designs \cite{konashi_environmentally_2012}};
+\node (inp) [process, below of=irr]{In-Pile test \cite{hirai_study_2010}};
+\node (core) [process, above right=0.1cm and 2cm of irr] {\gls{JSFR} In-core Performance (current)};
+
+\draw [arrow] (fab) -- (core); 
+\draw [arrow] (inp) -- (core);
+\draw [arrow] (irr) -- (core);
+\draw [arrow] (pro) -- (core);
+\end{tikzpicture}
+\end{figure}
+
 \end{frame}
 
 
@@ -279,6 +289,17 @@ Hafnium hydride control rods replaced the boron carbide in the
     \item Absorber pellet limited $800^\cdot$C for hydrogen desorption
     \item No swelling of \hfh control rod
 \end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Control Rod Location}
+\begin{figure}[htbp!]
+  \begin{center}
+      \includegraphics[scale=0.3]{./images/elevator.png}
+  \end{center}
+  \caption{Elevator view of control rod position with respect to active core fuel. Control rod remains static.}
+  \label{fig:elev}
+\end{figure}
 \end{frame}
 
 
@@ -469,9 +490,10 @@ to enhanced reaction rate.
 
 
 \begin{frame}
-\frametitle{Technical Gaps}
+\frametitle{Technical Gaps, missing analyses}
 \begin{itemize}
     \item Multiplication factor (assuming critical because it is a control rod experiment)
+    \item Assumed static control rod position for entire cycle
     \item Non-normal operation scenarios
     \begin{itemize}
         \item Large temperature shift effect
@@ -480,7 +502,10 @@ to enhanced reaction rate.
     \end{itemize}
     \item Swelling of hafnium hydride
     \item Flux profile of reactor
-    \item Axial variation of control rod depletion
+    \item Static control rod position
+    \begin{itemize}
+        \item Axial variation of control rod depletion
+    \end{itemize}
     \item What happens when Hf-180 absorbs a neutron?
     \item Effect of higher power near control rod
 \end{itemize}
@@ -490,7 +515,7 @@ to enhanced reaction rate.
 
 
 \begin{frame}
-\frametitle{Future Work by authors}
+\frametitle{Future Work suggested by authors}
 \begin{itemize}
   \item Hydrogen desorption in operating conditions
   \item Uncertainty of control rod reactivity
@@ -499,27 +524,36 @@ to enhanced reaction rate.
 \end{frame}
 
 
+\subsection{Potential extensions of current work }
 \begin{frame}
 \frametitle{Potential extension of work}
 \begin{itemize}
   \item Accident scenarios
     leading to higher core temperature $\rightarrow$ desorption of hydrogen $\rightarrow$ less control rod worth
   \item Axial depletion change during operation
+  \begin{itemize}
+      \item Position of control rod changes over time with operation
+      \item Axial variation of irradiation / depletion
+  \end{itemize}
   \item With the allowance of longer life control rods, 'breed and burn'
   core designs with a much longer cycle time of 800 EFPD
+  \item Swelling of control rod with longer irradiation
   \item Effect of local moderation on used fuel composition and flux
   \item Effect of higher power near \hfh control rod
   \item Enrichment of Hf (increase composition of lower isotopes) for better performance
 \end{itemize}
 \end{frame}
 
+\subsection{Extension 1 - Accident Scenario and Hydrogen Desorption}
+
 \begin{frame}
-\frametitle{Accident Scenarios}
-\gls{ULOFA} - pump trip leading to loss of flow through core, sodium boiling, core meltdown and slumping, large reactivity addition \cite{raghupathy_source_2017}
+\frametitle{Extension 1 - Accident Scenarios}
+\gls{ULOFA} - pump trip leading to loss of flow through core, sodium boiling, core meltdown and slumping,
+and large reactivity addition \cite{raghupathy_source_2017}
 \begin{itemize}
-    \item Core temperature higher than 1000$^\cdot$C
+    \item Hydrogen desorption possible at 1,000$^\cdot$C \cite{konashi_development_2013}
+    \item Core temperature higher than 1,000$^\cdot$C during accident scenarios
     \item \hfh can lose up to 65\% of reactivity with hydrogen loss
-    \item Hydrogen desorption possible in higher temperatures (in-pile tests only consider up to 800$^\cdot$C)
 \end{itemize}
 \end{frame}
 
@@ -528,41 +562,52 @@ to enhanced reaction rate.
 \frametitle{Preliminary study}
 \begin{enumerate}
     \item \hfh in higher temperature than 800$^\cdot$C and observe hydrogen desorption with temperature
-    \item Obtain model for hydrogen desorption with temperature
-    \item Calculate \hfh reactivity change with temperature / irradiation
+    \item Calculate model for hydrogen desorption with temperature
+    \item Calculate \hfh control rod reactivity change with temperature / irradiation
 \end{enumerate}
 \end{frame}
 
 \begin{frame}
-\frametitle{In-core simluation}
+\frametitle{In-core Simulation}
 \begin{enumerate}
-    \item Run accident scenario core simulation with hydrogen desorption
-          model
-    \item Track core nuclear and thermal metrics
+    \item Run accident scenario core simulation with implemented hydrogen desorption
+          model (Nodal code coupled with Thermal-hydraulics code)
+    \item Track core nuclear and thermal metrics with time
+    \item Identify reactor shutdown problems
 \end{enumerate}
 \end{frame}
 
+\subsection{Extension 2 - Axial Variation of Control Rod}
 
 \begin{frame}
-\frametitle{Axial depletion variation with operation}
-Control rod position varies throughout operation
-
-Current paper assumes same location for control rod (40cm below top of fuel)
-\end{frame}
-
-
-\begin{frame}
-\frametitle{}
-
-
-\begin{frame}
-\frametitle{Investigate local power peaking}
-Increase in local (near \hfh control rod) power peaking
-due to hydrogen moderation
+\frametitle{Extension 2 - Axial variation of control rod}
+In normal operation control rod position moves within cycle.
+\begin{itemize}
+    \item This paper remains control rod static at half way pulled out
+    \item In reality control rod would be irradiated more if starting from bottom
+    \item Axial variation of control rod depletion
+\end{itemize}
 \end{frame}
 
 \begin{frame}
-\frametitle{}
+\frametitle{Axial power distribution change with control rod depletion}
+Run core simulation modeling operational control rod movement, remaining criticality.
+\begin{itemize}
+    \item Observe core axial power distribution with axially-varying control rod
+    \item Observe linear heat rate with axially-varying control rod
+\end{itemize}
+\end{frame}
+
+
+\section{Conclusion}
+\begin{frame}
+\frametitle{Conclusion}
+\begin{itemize}
+    \item This paper claims feasibility of \hfh control rods in \gls{SFR} reactors
+    \item Performs as good as or better in a \gls{JSFR} than \bc control rods using the methodology by the authors
+    \item Multiple issues have not been taken into account
+    \item Hydrogen desorption, criticality and swelling of control rod requires further study
+\end{itemize}
 \end{frame}
 
 %%--------------------------------%%
@@ -591,12 +636,13 @@ due to hydrogen moderation
 \frametitle{Cheat Sheet}
 \begin{itemize}
   \item Reactor Shutdown System - passively released due to curie point effect by abnormal rising of coolant temperature.
-  \item Passive safety -> thermal expansion of absorbing liquid
-  \item gas expansion leads to more neutron leakage
-  \item Doppler Coefficient : "Fuel temperature coefficient of reactivity" how reactivity changes per temperature in fuel
-  \item Gamma ray transport : Gamma ray has a long mfp that the decay energy to leave the zone of origin
+  \item Passive safety $\rightarrow$ thermal expansion of absorbing liquid
+  \item Edge - Na expansion leads to more neutron leakage (negative reactivity coeff)
+  \item Center - Na expansion leads to less absorption (positive reactivity coeff)
+  \item Doppler coefficient : "Fuel temperature coefficient of reactivity" how reactivity changes per temperature in fuel
+  \item Gamma Ray transport: Gamma ray has a long mfp that the decay energy to leave the zone of origin
   \item Fuel Slumping: Fuel melts to the bottom of the pin, increasing fuel density
-  \item Peaking Factor : $\frac{Highest Local Power Density}{Avg Power Density}$
+  \item Peaking Factor: $\frac{Highest Local Power Density}{Avg Power Density}$
 \end{itemize}
 \end{frame}
 
