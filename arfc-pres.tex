@@ -155,10 +155,10 @@ Need for a control rod with a longer lifetime in Sodium-cooled Fast Reactors
 
 \begin{frame}
 \frametitle{Hafnium as an absorber - 1/3}
-Comparable absorption cross section
+Comparable absorption cross section in core with hydrogen moderation 
 \begin{figure}[htbp!]
   \begin{center}
-      \includegraphics[scale=0.25]{./images/axs.png}
+      \includegraphics[scale=0.23]{./images/axs.png}
   \end{center}
   \caption{Absorption cross section comparison of various forms}
   \label{fig:axs}
@@ -326,7 +326,7 @@ Neutron absorption performance degrades very little with irradiation
 because the produced isotopes are also absorbers.
 \begin{figure}[htbp!]
   \begin{center}
-      \includegraphics[scale=0.5]{./images/irrad_isotope.png}
+      \includegraphics[scale=0.48]{./images/irrad_isotope.png}
   \end{center}
   \caption{Change of hafnium isotope ratio in the control rod during irradiation.}
   \label{fig:irrad_iso}
@@ -338,7 +338,7 @@ because the produced isotopes are also absorbers.
 Reactivity degradation is 4\% after 2400 \gls{EFPD} ( 3 cycles )
 \begin{figure}[htbp!]
   \begin{center}
-      \includegraphics[scale=0.5]{./images/irrad_reac.png}
+      \includegraphics[scale=0.4]{./images/irrad_reac.png}
   \end{center}
   \caption{Capture reaction rate and reactivity of hafnium hydride control rod.}
   \label{fig:irrad_reac}
@@ -589,15 +589,27 @@ In normal operation control rod position moves within cycle.
 \end{itemize}
 \end{frame}
 
+
 \begin{frame}
-\frametitle{Axial power distribution change with control rod depletion}
-Run core simulation modeling operational control rod movement, remaining criticality.
+\frametitle{Methods to measure control rod movement in cycle}
+Simplified to more elaborate:
 \begin{itemize}
-    \item Observe core axial power distribution with axially-varying control rod
-    \item Observe linear heat rate with axially-varying control rod
+  \item Linear control rod position from bottom to top throughout cycle ($y = \frac{h}{800}t $)
+  \item Past historical control rod movement throughout cycle
+  \item Use code to figure out critical rod position in t
 \end{itemize}
 \end{frame}
 
+
+\begin{frame}
+\frametitle{Axial power distribution change with control rod depletion}
+Run Monte Carlo core simulation code (SERPENT 2) with control rod movement.
+\begin{itemize}
+    \item Core axial power distribution with axially-varying control rod
+    \item Linear heat rate with axially-varying control rod
+    \item Control rod depletion
+\end{itemize}
+\end{frame}
 
 \section{Conclusion}
 \begin{frame}
@@ -632,6 +644,7 @@ Run core simulation modeling operational control rod movement, remaining critica
 \end{figure}
 \end{frame}
 
+
 \begin{frame}
 \frametitle{Cheat Sheet}
 \begin{itemize}
@@ -645,6 +658,33 @@ Run core simulation modeling operational control rod movement, remaining critica
   \item Peaking Factor: $\frac{Highest Local Power Density}{Avg Power Density}$
 \end{itemize}
 \end{frame}
+
+
+Predictor - corrector
+
+Current flux, deplete the fuel, if it is critical
+Run another calculation to finds
+
+ENDF JEFF 252 groups 'continuous'
+
+
+SERPENT 2 and SCALE are for doing depletion calculation
+generates homogenized cross section
+collapses to 7 group for fast
+
+
+homogenized cross sections to characterize the core
+  criticality values
+  critcial control rod position / ppm for boron
+  fuel depletion
+
+Thermal-hydraulics code
+internal to PARCS
+coupled to TRACE
+
+Provide reduced number of groups of cross sections to
+Core simulators like PARCS, set delta t
+adjust critical boron concentration and control rod position.
 
 
 \end{document}
