@@ -548,8 +548,8 @@ to enhanced reaction rate.
 
 \begin{frame}
 \frametitle{Extension 1 - Accident Scenarios}
-\gls{ULOFA} - pump trip leading to loss of flow through core, sodium boiling, core meltdown and slumping,
-and large reactivity addition \cite{raghupathy_source_2017}
+An accident scneario where the temperature of the core increases beyond operating tempearture
+and the control rods are dropped to high temperature sodium / fuel 
 \begin{itemize}
     \item Hydrogen desorption possible at 1,000$^\cdot$C \cite{konashi_development_2013}
     \item Core temperature higher than 1,000$^\cdot$C during accident scenarios
@@ -571,7 +571,8 @@ and large reactivity addition \cite{raghupathy_source_2017}
 \frametitle{In-core Simulation}
 \begin{enumerate}
     \item Run accident scenario core simulation with implemented hydrogen desorption
-          model (Nodal code coupled with Thermal-hydraulics code)
+          model
+    \item Modify cross section of control rod with temperature / irradiation using model obtained
     \item Track core nuclear and thermal metrics with time
     \item Identify reactor shutdown problems
 \end{enumerate}
@@ -603,7 +604,7 @@ Simplified to more elaborate:
 
 \begin{frame}
 \frametitle{Axial power distribution change with control rod depletion}
-Run Monte Carlo core simulation code (SERPENT 2) with control rod movement.
+Run core simulation with control rod movement.
 \begin{itemize}
     \item Core axial power distribution with axially-varying control rod
     \item Linear heat rate with axially-varying control rod
